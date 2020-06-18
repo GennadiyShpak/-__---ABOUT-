@@ -4,3 +4,8 @@
 
 @import 'normalize.scss';
 @import 'base.scss';
+
+@import './helpers/fonts';
+@import './helpers/variables';
+@import './components/container.scss';
+@import './components/blocks.scss';
