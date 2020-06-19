@@ -1,11 +1,9 @@
- .btn {
-   margin-bottom: 55px;
-   background-color: rgb(255, 107, 8);
-   width: 246px;
-   color: $white-color;
-   font-size: 1.1rem;
-   color: rgb(255, 255, 255);
-   font-weight: bold;
-   text-transform: uppercase;
-   height: 44px;
- }
+.btn {
+  display: block;
+  text-align: center;
+  background-color: $decor-color;
+  width: 250px;
+  height: 48px;
+  @include font($white-color, 1.2, 500, 48, 0.3);
+  text-transform: uppercase;
+}
