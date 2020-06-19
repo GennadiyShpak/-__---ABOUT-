@@ -9,7 +9,7 @@
   }
 }
 
-::before {
+.before-line::before {
   display: block;
   content: '';
   width: 25px;
