@@ -1,0 +1,88 @@
+.form {
+  width: 320px;
+  margin: 0 auto;
+  background-color: $main-text-color;
+  background-image: url(../images/form_bg-sm.png);
+  align-items: center;
+
+
+
+  &_input {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .name {
+    margin-bottom: 18px;
+  }
+
+  .tel {
+    margin-bottom: 55px;
+  }
+
+  .form_btn {
+    margin-bottom: 55px;
+    background-color: rgb(255, 107, 8);
+    width: 246px;
+    color: $white-color;
+    font-size: 11px;
+    font-family: "Montserrat",
+      sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    height: 44px;
+  }
+
+  &_text {
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 1.86;
+    width: 222px;
+    text-align: center;
+
+    margin: 0 auto;
+    padding: 60px 0px 30px;
+
+    &--style {
+      color: $decor-color;
+    }
+  }
+
+}
+
+.form_subtext {
+  font-size: 11px;
+  font-family: "Montserrat",
+    sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  line-height: 1.818;
+  text-align: center;
+  width: 254px;
+  padding-bottom: 35px;
+  margin: 0 auto;
+}
+
+
+.input {
+  height: 50px;
+  width: 280px;
+  background-color: transparent;
+  border: 1px solid $white-color;
+  padding-left: 23px;
+  font-size: 13px;
+  font-family: "Montserrat",
+    sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  line-height: 2.885;
+
+
+
+  &::placeholder {
+    color: $white-color;
+  }
+}
