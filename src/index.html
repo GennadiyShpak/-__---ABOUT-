@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8" />
@@ -11,12 +12,20 @@
   <!-- endinject -->
 </head>
 
-<body>
-  //= ./html/problems.html
-  //= ./html/program.html
-  <!-- Сюда будет всталена ссылка на файл скриптов -->
-  <!-- inject:js -->
-  <!-- endinject -->
-</body>
+  <body>
+    //= ./html/header.html
+    <main>
+      //= ./html/problems.html
+      //= ./html/how-we-do.html
+      //= ./html/program.html
+      //= ./html/choise.html
+      //= ./html/teacher.html
+      //= ./html/form.html
+
+    </main>
+    <!-- Сюда будет всталена ссылка на файл скриптов -->
+    <!-- inject:js -->
+    <!-- endinject -->    
+  </body>
 
 </html>
