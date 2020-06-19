@@ -3,7 +3,7 @@
   padding: 45px 0 25px;
   position: relative;
 
-  .program__body {
+  .program__container {
     .program__title {
       margin-bottom: 25px;      
     }
@@ -53,6 +53,11 @@
             .program__sublist-item-title { 
               @include font($decor-color, 13, 500, 29, 0.65);
               margin-bottom: 7px;
+
+              &::before {
+                top: -3px;
+                margin-right: 13px;
+              }
 
             }
 
