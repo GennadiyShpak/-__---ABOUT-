@@ -3,12 +3,10 @@
   font-weight: 800;
   line-height: 32px;
   color: $main-text-color;
-
   &_light {
     color: $white-color;
   }
 }
-
 .before-line::before {
   display: block;
   content: '';
@@ -17,7 +15,7 @@
   background-color: $decor-color;
 }
 .item__title{
-  font-size: 13px;
+  font-size: 1.3rem;
   line-height: 1.5;
   color: $main-text-color;
   text-align: center;
