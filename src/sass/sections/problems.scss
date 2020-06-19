@@ -1,0 +1,88 @@
+  .problems-menu {
+    &__list {
+      box-shadow: 4px 7px 16px 6px rgba(29, 29, 27, 0.04);
+      background-color: $white-color;
+      width: 100%;
+      margin: 0 auto;
+      padding-bottom: 20px;
+    }
+
+    &__item {
+      display: block;
+      padding-left: 28px;
+
+      &::before {
+        margin-bottom: -16px;
+      }
+    }
+  }
+
+  .counter::before {
+    display: block;
+    margin-left: 40px;
+    font-size: 14px;
+    color: $decor-color;
+  }
+
+
+
+  .counter {
+    font-size: 13px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.65px;
+  }
+
+
+  .text_wrapper {
+    display: flex;
+    flex-flow: row wrap;
+
+    &_item {
+      padding-right: 6px;
+      color: $main-text-color;
+    }
+  }
+
+  .problems {
+    background: linear-gradient(to bottom,
+        rgb(0, 0, 0) 0px,
+        rgb(0, 0, 0) 437px,
+        rgb(255, 255, 255) 438px,
+        rgb(255, 255, 255) 800px);
+    padding-top: 50px;
+    padding-bottom: 400px;
+
+    &_counter {
+      counter-increment: problems_counter;
+
+      &::before {
+        content: "0"counter(problems_counter);
+      }
+    }
+  }
+
+  .choce-title_wrapper {
+    min-width: 220px;
+    margin-bottom: 20px;
+  }
+
+  .section-title {
+    &_light {
+      display: flex;
+      flex-flow: row wrap;
+      line-height: 32px;
+      text-align: left;
+      padding-right: 20px;
+    }
+
+    &_line {
+      padding-right: 6px;
+    }
+
+    &_item {
+      color: $decor-color;
+      padding-right: 6px;
+    }
+  }
