@@ -1,8 +1,9 @@
-@mixin flex($jc, $ai, $fw,) {
+@mixin flex($jc, $ai, $fw, $fd) {
   display: flex;
   justify-content: $jc;
   align-items: $ai;
-  flex-wrap: $fw;  
+  flex-wrap: $fw;
+  flex-direction: $fd;
 }
 
 @mixin font($clr, $fz, $fw, $lh, $ls) {

@@ -12,6 +12,7 @@
       .program__item-title { 
         @include font($white-color, 15, 700, 29, 1.65);
         text-transform: uppercase;
+        flex-direction: ;
       }
 
       .program__item-sublist { 
