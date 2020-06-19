@@ -6,8 +6,14 @@
 @import 'base.scss';
 
 @import './helpers/fonts';
+@import './helpers/mixins.scss';
 @import './helpers/variables';
 @import'./section/section_form.scss';
 @import './components/container.scss';
 @import './components/blocks.scss';
+
 @import'./components/btn.scss';
+@import './components/logo.scss';
+@import './sections/program.scss';
+@import './sections/how-we-do.scss';
+
