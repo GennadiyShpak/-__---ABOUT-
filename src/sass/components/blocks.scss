@@ -7,8 +7,9 @@
     color: $white-color;
   }
 }
+
 .before-line::before {
-  display: block;
+  display: inline-block;
   content: '';
   width: 25px;
   height: 2px;

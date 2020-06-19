@@ -6,7 +6,11 @@
 @import 'base.scss';
 
 @import './helpers/fonts';
+@import './helpers/mixins.scss';
 @import './helpers/variables';
 @import './components/container.scss';
 @import './components/blocks.scss';
+
+@import './sections/program.scss';
 @import './sections/how-we-do.scss';
+
