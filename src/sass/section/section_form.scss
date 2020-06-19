@@ -1,5 +1,5 @@
 .form {
-  width: 20rem;
+  width: 320px;
   margin: 0 auto;
   background-color: $main-text-color;
   background-image: url(../images/form_bg-sm.png);
@@ -13,26 +13,25 @@
   }
 
   .name {
-    margin-bottom: 1.125rem;
+    margin-bottom: 18px;
   }
 
   .tel {
-    margin-bottom: 3.4375rem;
+    margin-bottom: 55px;
   }
 
 
 
   &_text {
-    font-size: 0.875rem;
-    font-family: "Montserrat", sans-serif;
+    font-size: 1.4rem;
     color: rgb(255, 255, 255);
     font-weight: bold;
     line-height: 1.86;
-    width: 13.875rem;
+    width: 222px;
     text-align: center;
 
     margin: 0 auto;
-    padding: 3.75rem 0rem 1.875rem;
+    padding: 60px 0px 30px;
 
     &--style {
       color: $decor-color;
@@ -42,28 +41,24 @@
 }
 
 .form_subtext {
-  font-size: 0.6875rem;
-  font-family: "Montserrat",
-    sans-serif;
+  font-size: 1.1rem;
   color: rgb(255, 255, 255);
   font-weight: bold;
   line-height: 1.818;
   text-align: center;
-  width: 15.875rem;
-  padding-bottom: 2.1875rem;
+  width: 254px;
+  padding-bottom: 35px;
   margin: 0 auto;
 }
 
 
 .input {
-  height: 3.125rem;
-  width: 17.5rem;
+  height: 50px;
+  width: 280px;
   background-color: transparent;
-  border: 0.0625rem solid $white-color;
-  padding-left: 1.4375rem;
-  font-size: 0.8125rem;
-  font-family: "Montserrat",
-    sans-serif;
+  border: 1px solid $white-color;
+  padding-left: 23px;
+  font-size: 1.3rem;
   color: rgb(255, 255, 255);
   font-weight: bold;
   line-height: 2.885;
