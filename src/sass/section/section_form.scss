@@ -1,5 +1,5 @@
 .form {
-  width: 320px;
+  width: 20rem;
   margin: 0 auto;
   background-color: $main-text-color;
   background-image: url(../images/form_bg-sm.png);
@@ -13,38 +13,26 @@
   }
 
   .name {
-    margin-bottom: 18px;
+    margin-bottom: 1.125rem;
   }
 
   .tel {
-    margin-bottom: 55px;
+    margin-bottom: 3.4375rem;
   }
 
-  .form_btn {
-    margin-bottom: 55px;
-    background-color: rgb(255, 107, 8);
-    width: 246px;
-    color: $white-color;
-    font-size: 11px;
-    font-family: "Montserrat",
-      sans-serif;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    text-transform: uppercase;
-    height: 44px;
-  }
+
 
   &_text {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-family: "Montserrat", sans-serif;
     color: rgb(255, 255, 255);
     font-weight: bold;
     line-height: 1.86;
-    width: 222px;
+    width: 13.875rem;
     text-align: center;
 
     margin: 0 auto;
-    padding: 60px 0px 30px;
+    padding: 3.75rem 0rem 1.875rem;
 
     &--style {
       color: $decor-color;
@@ -54,26 +42,26 @@
 }
 
 .form_subtext {
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-family: "Montserrat",
     sans-serif;
   color: rgb(255, 255, 255);
   font-weight: bold;
   line-height: 1.818;
   text-align: center;
-  width: 254px;
-  padding-bottom: 35px;
+  width: 15.875rem;
+  padding-bottom: 2.1875rem;
   margin: 0 auto;
 }
 
 
 .input {
-  height: 50px;
-  width: 280px;
+  height: 3.125rem;
+  width: 17.5rem;
   background-color: transparent;
-  border: 1px solid $white-color;
-  padding-left: 23px;
-  font-size: 13px;
+  border: 0.0625rem solid $white-color;
+  padding-left: 1.4375rem;
+  font-size: 0.8125rem;
   font-family: "Montserrat",
     sans-serif;
   color: rgb(255, 255, 255);
