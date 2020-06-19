@@ -12,9 +12,7 @@
 .before-line::before {
   display: inline-block;
   position: relative;
-  top: -3px;
-  margin-right: 13px;
-  content: '';
+   content: '';
   width: 25px;
   height: 2px;
   background-color: $decor-color;
