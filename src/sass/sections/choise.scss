@@ -1,0 +1,13 @@
+.choise { 
+  background-image: linear-gradient(180deg, $main-text-color 65%, $white-color 65%);
+  padding: 18px 0 25px;
+
+  .container { 
+    .choise__title { 
+      padding-right: 50px;
+      margin-bottom: 18px;
+    }
+
+  }
+
+}
