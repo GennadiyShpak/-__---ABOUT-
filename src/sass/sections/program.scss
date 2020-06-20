@@ -29,7 +29,9 @@
           width: 2px;
           height: 100%;
           display: block;
-          background-color: $secondary-text-color;
+          background: url(../images/guarantee-line.png);
+          // background-color: $secondary-text-color;
+          background-size: contain;
         }
 
         .program__item-title { 
