@@ -46,11 +46,7 @@
   }
 
   .problems {
-    background: linear-gradient(to bottom,
-        rgb(0, 0, 0) 0px,
-        rgb(0, 0, 0) 437px,
-        rgb(255, 255, 255) 438px,
-        rgb(255, 255, 255) 800px);
+    background: linear-gradient(to bottom, $main-text-color 437px, $white-color 438px);
     padding-top: 50px;
     padding-bottom: 400px;
 
