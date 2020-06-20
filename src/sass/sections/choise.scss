@@ -1,13 +1,72 @@
-.choise { 
+.choise {
   background-image: linear-gradient(180deg, $main-text-color 65%, $white-color 65%);
   padding: 18px 0 25px;
 
-  .container { 
-    .choise__title { 
+  .container {
+    .choise__title {
+      text-align: left;
       padding-right: 50px;
       margin-bottom: 18px;
     }
 
   }
 
+}
+
+.choice-menu {
+  &__list {
+    box-shadow: 4px 7px 16px 6px rgba(29, 29, 27, 0.04);
+    background-color: $white-color;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__item {
+    display: block;
+    padding-left: 28px;
+
+    &::before {
+      margin-bottom: -14px;
+    }
+  }
+}
+
+.counter::before {
+  display: block;
+  margin-left: 40px;
+  font-size: 14px;
+  color: $decor-color;
+}
+
+.counter {
+  @include font($main-text-color, 1.3, 700, 20, 0.65);
+}
+
+
+.choice-text_wrapper {
+  display: flex;
+  flex-flow: row wrap;
+
+  &_item {
+    padding-right: 6px;
+    color: $main-text-color;
+  }
+}
+
+.choice {
+  background: linear-gradient(to bottom, $main-text-color 63%, $white-color 63%);
+  padding-top: 50px;
+  padding-bottom: 100px;
+  margin: 0 auto;
+
+  &_counter {
+    counter-increment: choice_counter;
+
+    &::before {
+      content: "0"counter(choice_counter);
+    }
+  }
 }
