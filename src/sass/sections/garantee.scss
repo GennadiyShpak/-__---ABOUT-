@@ -3,6 +3,7 @@
     background-color: #f1f1f1;
     padding: 28px 20px;
   }
+
   &__text {
     color: #18191d;
     font-size: 11px;
@@ -12,15 +13,17 @@
     background-image: url(../images/icon-campfire.svg);
     background-repeat: no-repeat;
     padding-left: 34px;
+
     &:not(:last-child) {
       margin-bottom: 26px;
     }
+
     &--span {
       color: #ff6b08;
     }
   }
 }
 
-.section-title {
+.garantee-title {
   text-align: center;
 }

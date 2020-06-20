@@ -12,7 +12,7 @@
       padding-left: 28px;
 
       &::before {
-        margin-bottom: -16px;
+        margin-bottom: -14px;
       }
     }
   }
@@ -24,18 +24,12 @@
     color: $decor-color;
   }
 
-
-
   .counter {
-    font-size: 13px;
-    font-size: 13px;
-    font-weight: 700;
-    line-height: 20px;
-    letter-spacing: 0.65px;
+    @include font($main-text-color, 1.3, 700, 20, 0.65);
   }
 
 
-  .text_wrapper {
+  .problems-text_wrapper {
     display: flex;
     flex-flow: row wrap;
 
@@ -46,9 +40,9 @@
   }
 
   .problems {
-    background: linear-gradient(to bottom, $main-text-color 437px, $white-color 438px);
+    background: linear-gradient(to bottom, $main-text-color 67%, $white-color 67%);
     padding-top: 50px;
-    padding-bottom: 400px;
+    padding-bottom: 100px;
 
     &_counter {
       counter-increment: problems_counter;
@@ -59,7 +53,7 @@
     }
   }
 
-  .choce-title_wrapper {
+  .problems-title_wrapper {
     min-width: 220px;
     margin-bottom: 20px;
   }
