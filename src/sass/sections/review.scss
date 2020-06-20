@@ -1,0 +1,72 @@
+.review {
+  padding-top: 50px;
+  text-align: center;
+}
+.review__title {
+  font-size: 20px;
+  font-weight: 700;
+  width: 180px;
+  margin: 0 auto;
+  padding-bottom: 33px;
+}
+.review__card {
+  padding: 30px 0px 30px 0px;
+  margin: 0 auto;
+  width: 280px;
+  background-color: $white-color;
+  box-shadow: 4px 6.928px 34.96px 11.04px rgba(29, 29, 27, 0.09);
+}
+.card__photo {
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.card__name::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 20px;
+  background-image: url(../images/icon-vk.svg);
+}
+.card__name {
+  padding-top: 24px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 29.17px;
+  color: $decor-color;
+}
+.card__description {
+  padding-top: 24px;
+  font-size: 11px;
+  color: $secondary-text-color;
+  line-height: 16.67px;
+}
+.card__text {
+  padding-top: 23px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 20px;
+}
+.card__link {
+  color: $decor-color;
+}
+.card__wrapper {
+  width: 228px;
+  margin: 0 auto;
+}
+.slider {
+  padding-top: 18px;
+}
+.slider__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.slider__item {
+  width: 55px;
+  height: 55px;
+  margin: 0px 14px 0px 14px;
+}
+.slider__item:nth-child(2n) {
+  margin: 0px;
+}
+.slider__button-wrapper {
+}
