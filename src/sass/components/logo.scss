@@ -1,8 +1,10 @@
 .logo {
   width: 80px;
   position: relative;
+  z-index: 5;
   text-align: center;
   top: -10px;
+  transition: $transition;
 
   &__link {
     @include font($main-text-color,1.5,800,20,0.75);
@@ -23,5 +25,12 @@
     &--span {
       color: $decor-color;
     }
+  }
+
+  &.burger-open {
+    .logo__link {
+      color: $white-color;
+    }
+
   }
 }

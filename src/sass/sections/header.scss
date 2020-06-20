@@ -3,25 +3,8 @@
   background: url(../images/header_shape-sm.png) top no-repeat;
   background-size: 100% 68%;
 
-  .nav-menu,
-  .header__nav-menu {
-    margin-bottom: 42px;
-    @include flex($sp-bt, $cnt, wrap, $rw);
-
-    .burger,
-    .header__burger {
-      .burger-icon {
-        display: block;
-        background-color: $main-text-color;
-        width: 24px;
-        height: 2px;
-
-        &:not(:last-child) {
-          margin-bottom: 3px;
-        }
-      }
-    }
-  }
+  @import '../components/nav-menu.scss';
+    
 
   .hero {
     margin-bottom: 90px;

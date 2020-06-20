@@ -6,7 +6,7 @@
   text-transform: uppercase;
 
   &:focus{
-    background-color: #d35526;
+    background-color: $active-color;
     outline: none;
   }
 }
