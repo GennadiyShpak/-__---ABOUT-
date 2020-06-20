@@ -1,0 +1,10 @@
+.footer {
+  padding-top: 28px;
+  padding-bottom: 28px;
+  background-color: $main-text-color;
+}
+
+.footer-text {
+  @include font ($secondary-text-color, 1.1, 500, 16, 0.55);
+  text-align: center;
+}

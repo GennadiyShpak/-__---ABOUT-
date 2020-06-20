@@ -3,14 +3,15 @@
   justify-content: center;
   padding: 40px 0 54px;
 
-  &__title{
+  &__title {
     width: max-content;
     margin: 0 auto;
+    margin-bottom: 38px;
   }
 
   &__list {
     background-color: $white-color;
-    padding: 0 10px;  
+    padding: 0 10px;
   }
 
   &__card {
@@ -19,7 +20,7 @@
     margin-bottom: 16px;
     transition: all .2s ease-in-out;
     max-width: 430px;
-    box-shadow: 4px 6.928px 23.68px 8.32px rgba(29, 29, 27, 0.11);    
+    box-shadow: 4px 6.928px 23.68px 8.32px rgba(29, 29, 27, 0.11);
 
     &:hover {
       background-color: $decor-color;
@@ -63,57 +64,67 @@
 
 }
 
-@media (min-width: 768px){
-  .how-we-do{
+@media (min-width: 768px) {
+  .how-we-do {
     &__list {
-      display: flex; 
+      display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
     }
+
     &__card {
-          width: 40%;
+      width: 40%;
     }
   }
 }
-@media (min-width: 1280px){
-  .item__title{
+
+@media (min-width: 1280px) {
+  .item__title {
     font-size: 1.8rem;
   }
-  .how-we-do{
+
+  .how-we-do {
     max-width: 1680px;
     margin: 0 auto;
     padding-bottom: 100px;
-    &__list{
+
+    &__list {
       justify-content: space-between;
     }
-    &__title{
+
+    &__title {
       margin-left: 10px;
       padding-bottom: 50px;
       font-size: 4.2rem;
     }
+
     &__card {
       width: 30%;
-      &:hover{
+
+      &:hover {
         .how-we-do__svg {
           fill: $active-fill;
           transform: scale(1.8);
         }
       }
     }
+
     &__text {
-      font-size: 1.5rem; 
-    } 
+      font-size: 1.5rem;
+    }
   }
 }
-@media (min-width: 1680px){
-  .item__title{
+
+@media (min-width: 1680px) {
+  .item__title {
     font-size: 2rem;
   }
-  .how-we-do{
-    padding-bottom: 130px;
-    &__text {
-      font-size: 1.8rem; 
-    } 
-  }
-} 
 
+  .how-we-do {
+    padding-bottom: 130px;
+
+    &__text {
+      font-size: 1.8rem;
+    }
+  }
+}
