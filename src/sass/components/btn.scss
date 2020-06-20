@@ -4,4 +4,9 @@
   @include font($white-color, 1.2, 500, 48, 0.3);
   background-color: $decor-color;  
   text-transform: uppercase;
+
+  &:focus{
+    background-color: #d35526;
+    outline: none;
+  }
 }
