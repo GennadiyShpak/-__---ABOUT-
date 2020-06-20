@@ -40,9 +40,9 @@
   }
 
   .problems {
-    background: linear-gradient(to bottom, $main-text-color 67%, $white-color 67%);
+    background: linear-gradient(to bottom, $main-text-color 78%, $white-color 78%);
     padding-top: 50px;
-    padding-bottom: 100px;
+
 
     &_counter {
       counter-increment: problems_counter;
