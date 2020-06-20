@@ -1,25 +1,25 @@
 .logo {
   width: 80px;
   position: relative;
+  text-align: center;
+  top: -10px;
+
   &__link {
-    color: $main-text-color;
-    font-size: 1.5rem;
-    font-weight: 800;
-    line-height: 20px;
-    letter-spacing: 0.75px;
+    @include font($main-text-color,1.5,800,20,0.75);
   }
-  &__name {
-    word-spacing: 14px;
-  }
+  
   &__img {
-    position: absolute;
-    top: 0;
-    left: 36px;
+    position: relative;
+    display: inline;
+    top: 11px;
   }
+
   &__text {
     font-size: 0.5rem;
     text-transform: uppercase;
     line-height: 8px;
+    letter-spacing: 0.69px;
+    
     &--span {
       color: $decor-color;
     }
