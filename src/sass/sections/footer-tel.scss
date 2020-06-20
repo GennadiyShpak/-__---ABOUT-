@@ -1,0 +1,40 @@
+  .footer-tel {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    padding-top: 36px;
+  }
+
+  .footer-tel__link_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .phone-link {
+    @include font($main-text-color, 1.8, 600, 30, 0.9);
+    margin-bottom: 26px;
+
+    &::before {
+      display: inline-block;
+      content: '';
+      background-image: url(../images/icon_tel.png);
+      background-repeat: no-repeat;
+      background-position: bottom;
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+      transform: translateY(4px);
+    }
+  }
+
+  .footer-tels {
+    padding-top: 26px;
+    padding-bottom: 14px;
+  }
+
+  .instagram-link {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 26px;
+  }
