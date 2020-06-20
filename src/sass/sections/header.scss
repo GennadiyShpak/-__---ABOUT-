@@ -1,9 +1,11 @@
 .header {
   padding: 30px 0 30px;
+  background: url(../images/header_shape-sm.png) top no-repeat;
+  background-size: 100% 68%;
 
   .nav-menu,
   .header__nav-menu {
-    margin-bottom: 40px;
+    margin-bottom: 42px;
     @include flex($sp-bt, $cnt, wrap, $rw);
 
     .burger,
@@ -22,53 +24,63 @@
   }
 
   .hero {
-    margin-bottom: 60px;
+    margin-bottom: 90px;
 
-    .hero__title {
-      letter-spacing: 0.6px;
-      margin-bottom: 15px;
-    }
-
-    .hero__description {
-      margin-bottom: 20px;
-
-      .hero__description-text {
-        display: inline-block;
-        @include font($main-text-color, 1.5, 700, 20, 0.6);
+    .hero__wrap-text-and-btn {
+      .hero__title {
+        letter-spacing: 0.6px;
+        margin-bottom: 24px;
+        padding: 0 calc(73% - 204px) 0 0;
+  
+        .hero__title--br {
+          display: inline-block;
+        }
       }
-
-      .hero__description-text--gray {
+  
+      .hero__description {
+        margin-bottom: 35px;
+  
+        .hero__description-text {
+          display: inline-block;
+          @include font($main-text-color, 1.5, 700, 20, 0.6);
+        }
+  
+        .hero__description-text--gray {
+          display: block;
+          color: #b9b9b9;
+        }
+  
+        .hero__description-text--orange {
+          color: $decor-color;
+  
+        }
+      }
+  
+      .hero__btn {
         display: block;
-        color: #b9b9b9;
-      }
-
-      .hero__description-text--orange {
-        color: $decor-color;
-
+        margin: 0 auto 32px;
       }
     }
 
-    .hero__btn {
-      display: inline-block;
-      margin: 0 auto 25px;
-    }
 
     .hero__img {
       img {
-        margin: 0 auto;
+        padding: 0 calc(37% - 61px);
+        width: 100%;
+        height: auto;
       }
     }
   }
 
   .advantages {
     .advantages__list {
-      @include flex($cnt, $cnt, wrap, $clm);
+      @include flex($cnt, $cnt, wrap, $rw);
       padding-left: 50px;
 
       .advantages__item {
         position: relative;
         padding-left: 70px;
-        margin-bottom: 18px;
+        margin-bottom: 22px;
 
         .advantages__icon {
           fill: $decor-color;

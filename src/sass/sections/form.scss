@@ -1,15 +1,16 @@
 .form {
-  width: 320px;
   background-color: $main-text-color;
   background-image: url(../images/form_bg-sm.png);
+  background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   margin: 0 auto;
-  align-items: center;
+  padding: 60px 0 60px;
 
   .form_input {
     margin: 0 auto;
     text-align: center;
-    padding-bottom: 40px;
+    padding: 0 calc(35% - 100px);
   }
 
   .name {
@@ -27,11 +28,9 @@
     color: rgb(255, 255, 255);
     font-weight: bold;
     line-height: 1.86;
-    width: 222px;
     text-align: center;
-
-    margin: 0 auto;
-    padding: 60px 0px 30px;
+    padding: 0 calc(35% - 69px);
+    margin: 0 auto 30px;
 
     &--style {
       color: $decor-color;
@@ -46,15 +45,14 @@
   font-weight: bold;
   line-height: 1.818;
   text-align: center;
-  width: 254px;
-  padding-bottom: 30px;
-  margin: 0 auto;
+  margin: 0 auto 30px;
+  padding: 0 calc(35% - 80px);
 }
 
 
 .input {
   height: 50px;
-  width: 280px;
+  width: 100%;
   background-color: transparent;
   border: 1px solid $white-color;
   padding-left: 23px;
@@ -63,7 +61,7 @@
   font-weight: bold;
   line-height: 2.885;
   margin: 0 auto;
-
+  
 
   &::placeholder {
     color: $white-color;
