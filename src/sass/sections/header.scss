@@ -1,24 +1,19 @@
-.header { 
+.header {
   padding: 30px 0 30px;
 
   .nav-menu,
-  .header__nav-menu { 
+  .header__nav-menu {
     margin-bottom: 40px;
     @include flex($sp-bt, $cnt, wrap, $rw);
 
-    .menu-list,
-    .header__menu-list { 
-
-    }
-
     .burger,
-    .header__burger { 
+    .header__burger {
       .burger-icon {
-        display: block; 
+        display: block;
         background-color: $main-text-color;
         width: 24px;
         height: 2px;
-        
+
         &:not(:last-child) {
           margin-bottom: 3px;
         }
@@ -26,51 +21,51 @@
     }
   }
 
-  .hero { 
+  .hero {
     margin-bottom: 60px;
 
-    .hero__title { 
+    .hero__title {
       letter-spacing: 0.6px;
       margin-bottom: 15px;
     }
-    
-    .hero__description { 
+
+    .hero__description {
       margin-bottom: 20px;
 
-      .hero__description-text { 
+      .hero__description-text {
         display: inline-block;
         @include font($main-text-color, 1.5, 700, 20, 0.6);
       }
 
-      .hero__description-text--gray { 
+      .hero__description-text--gray {
         display: block;
         color: #b9b9b9;
       }
 
-      .hero__description-text--orange { 
+      .hero__description-text--orange {
         color: $decor-color;
 
       }
     }
 
-    .hero__btn { 
+    .hero__btn {
       display: inline-block;
       margin: 0 auto 25px;
     }
 
-    .hero__img { 
+    .hero__img {
       img {
         margin: 0 auto;
       }
     }
   }
 
-  .advantages { 
-    .advantages__list { 
+  .advantages {
+    .advantages__list {
       @include flex($cnt, $cnt, wrap, $clm);
       padding-left: 50px;
 
-      .advantages__item { 
+      .advantages__item {
         position: relative;
         padding-left: 70px;
         margin-bottom: 18px;
@@ -96,7 +91,7 @@
           background-color: $white-color;
         }
 
-        .advantages__text { 
+        .advantages__text {
           @include font($main-text-color, 1.3, 700, 20, 0.65);
           width: 150px;
 
