@@ -26,43 +26,46 @@
   .hero {
     margin-bottom: 90px;
 
-    .hero__title {
-      letter-spacing: 0.6px;
-      margin-bottom: 24px;
-      padding: 0 calc(73% - 204px) 0 0;
-
-      .hero__title--br {
-        display: inline-block;
+    .hero__wrap-text-and-btn {
+      .hero__title {
+        letter-spacing: 0.6px;
+        margin-bottom: 24px;
+        padding: 0 calc(73% - 204px) 0 0;
+  
+        .hero__title--br {
+          display: inline-block;
+        }
       }
-    }
-
-    .hero__description {
-      margin-bottom: 35px;
-
-      .hero__description-text {
-        display: inline-block;
-        @include font($main-text-color, 1.5, 700, 20, 0.6);
+  
+      .hero__description {
+        margin-bottom: 35px;
+  
+        .hero__description-text {
+          display: inline-block;
+          @include font($main-text-color, 1.5, 700, 20, 0.6);
+        }
+  
+        .hero__description-text--gray {
+          display: block;
+          color: #b9b9b9;
+        }
+  
+        .hero__description-text--orange {
+          color: $decor-color;
+  
+        }
       }
-
-      .hero__description-text--gray {
+  
+      .hero__btn {
         display: block;
-        color: #b9b9b9;
-      }
-
-      .hero__description-text--orange {
-        color: $decor-color;
-
+        margin: 0 auto 32px;
       }
     }
 
-    .hero__btn {
-      display: block;
-      margin: 0 auto 32px;
-    }
 
     .hero__img {
       img {
-        padding: 0 calc(30% - 20px);
+        padding: 0 calc(37% - 61px);
         width: 100%;
         height: auto;
       }
@@ -71,7 +74,7 @@
 
   .advantages {
     .advantages__list {
-      @include flex($cnt, $cnt, wrap, $clm);
+      @include flex($cnt, $cnt, wrap, $rw);
       padding-left: 50px;
 
       .advantages__item {
