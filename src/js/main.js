@@ -1,0 +1,1 @@
+import * as Burger from './modules/burger.js';
