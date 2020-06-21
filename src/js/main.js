@@ -1,1 +1,1 @@
-import * as Burger from './modules/burger.js';
+//= './modules/burger.js'
