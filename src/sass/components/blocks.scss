@@ -1,9 +1,19 @@
 .section-title {
   @include font($main-text-color, 2, 800, 32, 1);
+  @media (min-width: 768px) {
+    @include font($main-text-color, 2.6, 800, 33, 1.3);
+  }
+  @media (min-width: 1280px) {
+    @include font($main-text-color, 4.2, 800, 56, 2.1);
+  }
+  @media (min-width: 1680px) {
+    @include font($main-text-color, 4.6, 800, 62, 2.3);
+  }
   
   &_light {
     color: $white-color;
   }
+
 }
 
 .before-line::before {
