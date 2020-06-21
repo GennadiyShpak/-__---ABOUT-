@@ -1,4 +1,5 @@
 const gulp = require('gulp');
+const rigger = require('gulp-rigger');
 const plumber = require('gulp-plumber');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
@@ -9,6 +10,7 @@ const paths = require('../paths');
 const scripts = () => {
   return gulp
     .src(paths.src.js)
+    .pipe(rigger())
     .pipe(plumber())
     .pipe(babel())
     .pipe(concat('scripts.js'))
