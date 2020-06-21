@@ -11,13 +11,13 @@
 
   &__list {
     background-color: $white-color;
-    padding: 0 10px;
+    // padding: 0 10px;
   }
 
   &__card {
     text-align: center;
     padding: 36px 26px 0 26px;
-    margin-bottom: 16px;
+    margin-bottom: 19px;
     transition: all .2s ease-in-out;
     max-width: 430px;
     box-shadow: 4px 6.928px 23.68px 8.32px rgba(29, 29, 27, 0.11);
@@ -70,10 +70,11 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
+      max-width: 905px;
     }
 
     &__card {
-      width: 40%;
+      width: 47.5%;
     }
   }
 }
@@ -90,6 +91,7 @@
 
     &__list {
       justify-content: space-between;
+      max-width: 1344px;
     }
 
     &__title {
@@ -99,7 +101,7 @@
     }
 
     &__card {
-      width: 30%;
+      width: 32%;
 
       &:hover {
         .how-we-do__svg {
