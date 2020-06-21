@@ -9,17 +9,19 @@
     position: absolute;
     z-index: 4;
     top: 0;
-    left: 0;
+    left: -110%;
     width: 100%;
     height: 100%;
     background: rgba(17, 21, 23, 0.95);
     visibility: hidden;
     opacity: 0;
+    overflow: scroll;
     transition: $transition;
 
     &.burger-open {
       visibility: visible;
       opacity: 1;
+      left: 0;
       transition: $transition;
     }
 
@@ -75,74 +77,102 @@
       display: block;
     }
     
-    .burger-icon {
-      display: block;
-      background-color: $main-text-color;
-      width: 24px;
-      height: 2px;
-      top: 0;      
-      position: relative;
-      transition: top 0.3s, transform 0.3s ease 0.3s;
+    // .burger-icon {
+    //   display: block;
+    //   background-color: $main-text-color;
+    //   width: 24px;
+    //   height: 2px;
+    //   top: 0;      
+    //   position: relative;
+    //   transition: top 0.3s, transform 0.3s ease 0.3s;
       
-      &:not(:last-child) {
-        margin-bottom: 3px;
-      }
-    }
+    //   &:not(:last-child) {
+    //     margin-bottom: 3px;
+    //   }
+    // }
 
-    &.burger-open {
-      .burger-icon {
-        &:nth-of-type(2) {
-          background-color: $white-color;
-          transform: rotate(45deg);
-          top: 5px;
-        }
+    // &.burger-open {
+    //   .burger-icon {
+    //     &:nth-of-type(2) {
+    //       background-color: $white-color;
+    //       transform: rotate(45deg);
+    //       top: 5px;
+    //     }
 
-        &:nth-of-type(3) {
-          transform: scale(0);
-        }
+    //     &:nth-of-type(3) {
+    //       transform: scale(0);
+    //     }
 
-        &:nth-of-type(4) {
-          background-color: $white-color;
-          transform: rotate(-45deg);
-          top: -5px;
-        }
-      }
-    }
+    //     &:nth-of-type(4) {
+    //       background-color: $white-color;
+    //       transform: rotate(-45deg);
+    //       top: -5px;
+    //     }
+    //   }
+    // }
   }
 }
 
 
+.burger {
+  svg {
+    height: 40px;
+    width: 60px;
+  }
+  
+  svg {
+    cursor: pointer;
+    height: 50px;
+    transform: translate3d(0px, 0px, 0px);
+    width: 80px;
 
+    &:not(:root) {overflow: hidden;}
 
-#sandwichmenu {
-	margin: 5px 0 0 0;  text-align: center;
-}
-.tpl_hamburger svg {height: 40px;width: 60px;}
-.tpl_hamburger svg {cursor: pointer;  height: 50px;  transform: translate3d(0px, 0px, 0px);  width: 80px;}
-svg:not(:root) {overflow: hidden;}
-.tpl_hamburger path.top, .tpl_hamburger path.bottom {
-    stroke-dasharray: 240px, 950px;
-}
-.tpl_hamburger path {
-    fill: none; stroke: #000; stroke-dashoffset: 0; stroke-linecap: round; stroke-width: 40px;
-    transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s, stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s;
-}
-.tpl_hamburger path.middle {stroke-dasharray: 240px, 240px;}
-.tpl_hamburger path {
-    fill: none; stroke: #000; stroke-dashoffset: 0; stroke-linecap: round; stroke-width: 40px;
-    transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s, stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s;
-}
+    path.top, 
+    path.bottom {
+      stroke-dasharray: 240px, 950px;
+    }
+    
+    path {
+      fill: none;
+      stroke: $main-text-color;
+      stroke-dashoffset: 0;
+      stroke-linecap: round;
+      stroke-width: 40px;
+      transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s, stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s, stroke 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s;
+    }
 
-.tpl_hamburger.active path.top, .tpl_hamburger.active path.bottom {
+    path.middle {
+      stroke-dasharray: 240px, 240px;
+    }
+
+    path {
+      fill: none;
+      stroke: $main-text-color;
+      stroke-dashoffset: 0;
+      stroke-linecap: round;
+      stroke-width: 40px;
+      transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s, stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s, stroke 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s;
+    }
+  }
+
+  &.burger-open path.top, 
+  &.burger-open path.bottom {
     stroke-dashoffset: -650px;
-}
-.tpl_hamburger path.top, .tpl_hamburger path.bottom {
+  }
+
+  path.top, 
+  path.bottom {
     stroke-dasharray: 240px, 950px;
-}
-.tpl_hamburger.active path.middle {
+  }
+
+  &.burger-open path.middle {
     stroke-dasharray: 1px, 220px;
     stroke-dashoffset: -115px;
-}
+  }
 
-.js_menu {display: none;}
-.js_menu.active {display: block;}
+  &.burger-open path {
+    stroke: $white-color;
+    transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s, stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s, stroke 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s;
+  }
+}
