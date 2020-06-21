@@ -51,12 +51,9 @@
     padding: 0 40px;
     margin: 0 auto;
     &__title {
-      font-size: 2.6rem;
+      @include font($main-text-color, 2.6, 800, 32, 1.3);
       margin-bottom: 28px;
     }
-    // &__container {
-    //   padding: 38px 54px 32px 60px;
-    // }
     &__list {
       padding: 38px 54px 32px 60px;
     }
