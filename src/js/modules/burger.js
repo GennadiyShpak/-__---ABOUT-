@@ -14,6 +14,7 @@ body.addEventListener('click', (event) => {
     burger.classList.toggle('burger-open');
     logo.classList.toggle('burger-open');
     menuNav.classList.toggle('burger-open');
+    button.classList.toggle('burger-open');
     body.classList.toggle('lock');
   } else if (target.closest('.header__menu-button')) {
     setTimeout(() => {
