@@ -4,12 +4,12 @@
     background-color: $white-color;
     width: 100%;
     margin: 0 auto;
-    padding-bottom: 20px;
   }
 
   &__item {
-    display: block;
+    max-width: 82%;
     padding-left: 28px;
+    @include font($main-text-color, 1.3, 700, 20, 0.65);
 
     &::before {
       margin-bottom: -14px;
@@ -20,22 +20,12 @@
 .counter::before {
   display: block;
   margin-left: 40px;
-  font-size: 14px;
+  font-size: 1.4rem;
   color: $decor-color;
 }
 
 .counter {
   @include font($main-text-color, 1.3, 700, 20, 0.65);
-}
-
-.problems-text_wrapper {
-  display: flex;
-  flex-flow: row wrap;
-
-  &_item {
-    padding-right: 6px;
-    color: $main-text-color;
-  }
 }
 
 .problems {
@@ -45,6 +35,7 @@
     $white-color 78%
   );
   padding-top: 50px;
+  padding-bottom: 20px;
 
   &_counter {
     counter-increment: problems_counter;
@@ -62,15 +53,8 @@
 
 .section-title {
   &_light {
-    display: flex;
-    flex-flow: row wrap;
     line-height: 32px;
-    text-align: left;
     padding-right: 20px;
-  }
-
-  &_line {
-    padding-right: 6px;
   }
 
   &_item {
@@ -80,13 +64,53 @@
 }
 
 @media (min-width: 768px) {
+  .problems {
+    background-image: url(../images/fire.png),
+      linear-gradient(to bottom, $main-text-color 364px, $white-color 365px);
+    background-repeat: no-repeat;
+    padding-top: 50px;
+    background-position: right top 25%;
+  }
+
   .problems-title_wrapper {
-    max-width: 51%;
+    max-width: 57%;
+    margin-bottom: 24px;
+  }
+
+  .problems-menu {
+    &__list {
+      @include flex($sp-bt, flex-start, wrap, $rw);
+      padding: 56px 108px 52px 78px;
+    }
+
+    &__item {
+      width: 46%;
+    }
   }
 }
 
 @media (min-width: 1280px) {
+  .problems {
+    background-image: url(../images/fire1280.png),
+      linear-gradient(to bottom, $main-text-color 364px, $white-color 365px);
+    background-repeat: no-repeat;
+    padding-top: 118px;
+    background-position: right bottom 25%;
+  }
+
   .problems-title_wrapper {
-    max-width: 65%;
+    max-width: 57%;
+    margin-bottom: 24px;
+  }
+
+  .problems-menu {
+    &__list {
+      @include flex($sp-bt, flex-start, wrap, $rw);
+      padding-left: 101px;
+    }
+
+    &__item {
+      width: 46%;
+    }
   }
 }
