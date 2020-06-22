@@ -1,0 +1,118 @@
+.guarantee {
+  padding-bottom: 20px;
+  &__title {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  &__list {
+    background-color: #f1f1f1;
+    padding: 28px 20px;
+  }
+  &__item {
+    position: relative;
+    padding-left: 34px;
+    &-text {
+      @include font($main-text-color, 1.1, 500, 20, 0.55);
+      position: relative;
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -4px;
+        left: -41px;
+        width: 20px;
+        height: 30px;
+        background: url(../images/icon-campfire.svg) center no-repeat;
+        background-size: contain;
+      }
+      &--star,
+      &--span {
+        color: $decor-color;
+      }
+    }
+    &:not(:last-child) {
+      padding-bottom: 26px;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 12px;
+        left: 2px;
+        width: 2px;
+        height: 100%;
+        display: block;
+        background: url(../images/guarantee-line.png);
+        background-size: contain;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 768px) {
+  .guarantee {
+    padding: 0 40px;
+    margin: 0 auto;
+    &__title {
+      @include font($main-text-color, 2.6, 800, 32, 1.3);
+      margin-bottom: 28px;
+    }
+    &__list {
+      padding: 38px 54px 32px 60px;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .guarantee {
+    padding: 0 35px 94px;
+    &__title {
+      @include font($main-text-color, 4.2, 800, 48, 2.1);
+      margin-bottom: 36px;
+    }
+    &__list {
+      padding: 48px 137px;
+    }
+    &__item:not(:last-child) {
+      padding-bottom: 32px;
+    }
+    &__item-text {
+      @include font($main-text-color, 1.8, 500, 29, 0.9);
+      &::before {
+        top: 7px;
+        left: -41px;
+        background-size: 24px;
+      }
+      &--span {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (min-width: 1680px) {
+  .guarantee {
+    padding: 0 155px 128px 186px;
+    &__title {
+      @include font($main-text-color, 4.6, 800, 62, 2.3);
+      margin-bottom: 42px;
+    }
+    &__list {
+      padding: 60px 148px;
+    }
+    &__item:not(:last-child) {
+      padding-bottom: 30px;
+    }
+    &__item-text {
+      @include font($main-text-color, 2.1, 500, 29, 1.04);
+      &::before {
+        top: 2px;
+        left: -41px;
+        height: 36px;
+        background-size: 30px;
+      }
+      &--span {
+        display: inline;
+      }
+    }
+  }
+}

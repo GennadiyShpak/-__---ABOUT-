@@ -1,27 +1,53 @@
 .logo {
   width: 80px;
   position: relative;
+  z-index: 5;
+  text-align: center;
+  top: -10px;
+  transition: $transition;
+  @media (min-width: 768px) {
+  width: 126px;
+
+  }
+
   &__link {
-    color: $main-text-color;
-    font-size: 1.5rem;
-    font-weight: 800;
-    line-height: 20px;
-    letter-spacing: 0.75px;
+    @include font($main-text-color,1.5,800,20,0.75);
+    @media (min-width: 768px) {
+      @include font($main-text-color, 2.5, 800, 32, 1.2);
+    }
   }
-  &__name {
-    word-spacing: 14px;
-  }
+  
   &__img {
-    position: absolute;
-    top: -4px;
-    left: 36px;
+    position: relative;
+    display: inline;
+    top: 11px;
+    @media (min-width: 768px) {
+      width: 30px;
+      height: 38px;
+    }
   }
+
   &__text {
     font-size: 0.5rem;
     text-transform: uppercase;
     line-height: 8px;
+    letter-spacing: 0.69px;
+    @media (max-width: 767px) {
+      word-spacing: 3px;
+    }
+    @media (min-width: 768px) {
+      @include font($main-text-color, 0.9, 700, 12, 0.65);
+    }
+    
     &--span {
       color: $decor-color;
     }
+  }
+
+  &.burger-open {
+    .logo__link {
+      color: $white-color;
+    }
+
   }
 }

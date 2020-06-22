@@ -1,20 +1,16 @@
-.section-title {
-  margin-bottom: 26px;
-}
-
 .teacher {
-  padding-top: 46px;
+  padding-bottom: 48px;
+
+  &__title {
+    margin-bottom: 26px;
+  }
 
   &__photo {
     margin-bottom: 24px;
   }
 
   &__name {
-    color: $main-text-color;
-    font-size: 1.6rem;
-    font-weight: 400;
-    line-height: 29px;
-    letter-spacing: 0.8px;
+    @include font($main-text-color, 1.6, 800, 29, 0.8);
     margin-bottom: 26px;
 
     &::after {
@@ -26,47 +22,119 @@
       opacity: 0.38;
     }
   }
-
   &__list {
     margin-bottom: 20px;
   }
-
   &__item {
-    color: $main-text-color;
-    font-size: 1.3rem;
-    font-weight: 600;
-    background-image: url(../images/icon-check.svg);
-    background-repeat: no-repeat;
-    padding-left: 44px;
-
+    background: url(../images/icon-check.svg) top left -5px no-repeat;
+    background-size: 30px;
+    padding-left: 34px;
+    &-text {
+      @include font($main-text-color, 1.3, 700, 20, 0.65);
+    }
     &:not(:last-child) {
-      margin-bottom: 26px;
+      margin-bottom: 16px;
     }
   }
 
+  &__description-wrapper {
+    min-width: 246px;
+    margin: 0 auto;
+  }
   &__description {
-    color: $secondary-text-color;
-    font-size: 1.1rem;
-    font-weight: 500;
-    line-height: 20px;
+    @include font($secondary-text-color, 1.1, 400, 20, 0.55);
     margin-bottom: 22px;
   }
-
   &__link {
-    color: $decor-color;
-    font-size: 1.1rem;
-    font-weight: 400;
-    line-height: 29px;
+    @include font($decor-color, 1.1, 400, 29, 0.55);
     text-decoration: underline;
-    letter-spacing: 0.55px;
+  }
+}
+.description-before::before {
+  margin-bottom: 16px;
+}
+
+
+@media (min-width: 768px) {
+  .teacher {
+    padding-bottom: 62px;
+    &-wrapper {
+      display: flex;
+    }
+    &__title {
+      @include font($main-text-color, 2.6, 800, 32, 1.3);
+      margin-bottom: 32px;
+    }
+    &__photo {
+      width: 247px;
+      height: 321px;
+      margin-right: 44px;
+    }
+    &__description-wrapper {
+      width: 396px;
+    }
+    &__name {
+      @include font($main-text-color, 2, 800, 29, 1);
+      margin-bottom: 26px;
+      &::after {
+        margin-top: 12px;
+      }
+    }
+  }
+}
+@media (min-width: 1280px) {
+  .teacher {
+    padding-bottom: 90px;
+    &__title {
+      @include font($main-text-color, 4.2, 800, 48, 2.1);
+      margin-bottom: 52px;
+    }
+    &__photo {
+      width: 494px;
+      height: 644px;
+      margin-right: 86px;
+    }
+    &__description-wrapper {
+      width: 610px;
+    }
+    &__name {
+      @include font($main-text-color, 2.9, 800, 33, 1.5);
+      margin-bottom: 40px;
+      &::after {
+        margin-top: 10px;
+      }
+    }
+    &__list {
+      margin-bottom: 30px;
+    }
+    &__item-text {
+      @include font($main-text-color, 1.7, 700, 29, 0.83);
+    }
+    &__item:not(:last-child) {
+      margin-bottom: 26px;
+    }
+    &__description {
+      @include font($secondary-text-color, 1.7, 400, 24, 0.83);
+      margin-bottom: 22px;
+    }
+    &__link {
+      @include font($decor-color, 1.7, 400, 24, 0.83);
+    }
+  }
+  .description-before::before {
+    margin-bottom: 32px;
   }
 }
 
-.description-wrapper {
-  width: 246px;
-  margin: 0 auto;
-
-  &::before {
-    margin-bottom: 18px;
+@media (min-width: 1680px) {
+  .teacher {
+    padding-bottom: 138px;
+    &__title {
+      @include font($main-text-color, 4.6, 800, 62, 2.3);
+      margin-bottom: 68px;
+    }
+    &__description-wrapper {
+      width: 664px;
+    }
   }
 }

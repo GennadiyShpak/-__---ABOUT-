@@ -1,0 +1,276 @@
+.nav-menu,
+.header__nav-menu {
+  margin-bottom: 42px;
+  @include flex($sp-bt, $cnt, wrap, $rw);
+
+  @import './logo.scss';
+  @media (min-width:768px) {
+    .logo {
+      flex: auto;
+      text-align: start;
+    }
+  }
+
+
+  .wrapper-burger-menu {
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: -110%;
+    width: 100%;
+    height: 100%;
+    background: rgba(17, 21, 23, 0.95);
+    visibility: hidden;
+    opacity: 0;
+    overflow: scroll;
+    transition: $transition;
+
+    &.burger-open {
+      visibility: visible;
+      opacity: 1;
+      left: 0;
+      transition: $transition;
+    }
+
+    .menu-list, 
+    .header__menu-list {
+      position: absolute;
+      min-width: 275px;
+      padding-left: 25px;
+      top: 115px;
+      left: 50%;
+      transform: translateX(-50%);
+      @media (min-width: 768px) {
+        padding-left: 10px;
+      }
+      
+      .header__menu-item {
+        .header__menu-link {
+          @include font($white-color, 2,700,40,1);
+          text-transform: uppercase;
+          display: block;
+          width: 100%;
+          transition: $transition;
+          @media (min-width:768px) {
+            @include font($white-color, 2.8,700,60,1);
+          }
+
+          &:focus {
+            color: $decor-color;
+          }
+        }
+      }    
+    }
+    @media (min-width: 1280px) {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translateX(0);
+      visibility: visible;
+      opacity: 1;
+      background: transparent;
+      width: auto;
+      overflow: hidden;
+
+      &.burger-open {
+        visibility: visible;
+        opacity: 1;
+        left: 0;
+        transition: $transition;
+      }
+      
+      .menu-list, 
+      .header__menu-list {
+        position: relative;
+        min-width: 275px;
+        margin-right: 22px;
+        top: 0;
+        left: 0;
+        transform: translateX(0);
+        @include flex($sp-bt, $cnt, wrap, $rw);
+        
+        .header__menu-item {
+          .header__menu-link {
+            @include font(#b9b9b9, 1.4,700,40,1);
+            display: block;
+            width: 100%;
+            padding: 22px;
+            transition: $transition;
+            @media (min-width: 1680px) {
+              font-size: 1.6rem;
+            }
+
+            &:hover {
+              color: $decor-color;
+            }
+          }
+        }    
+      }
+    }
+  }
+
+  .header__menu-button {
+    position: absolute;
+    z-index: 5;
+    top: 320px;
+    left: -110%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    border: 2px solid $decor-color;
+    color: $decor-color;
+    font-weight: 700;
+    line-height: 44px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: $transition;
+
+    &.burger-open {
+      visibility: visible;
+      opacity: 1;
+      left: 50%;
+      transition: $transition;
+    }
+
+    &:focus {
+      background-color: rgba(211, 84, 38, 0.651);
+      border: 2px solid $active-color;
+      color: $white-color;
+    }
+    @media (min-width:768px) {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translateX(0);
+      visibility: visible;
+      opacity: 1;
+      
+
+      &.burger-open {
+        visibility: visible;
+        opacity: 1;
+        left: 0;
+        transition: $transition;
+      }
+      @media (min-width:1280px) {
+        line-height: 64px;
+      }
+
+
+    }
+  }
+  
+  .burger,
+  .header__burger {
+    position: relative;
+    z-index: 5;
+    display: none;
+    transform: translateX(20px) translateY(-4px);
+    @media (min-width:768px) {
+      transform: translateX(40px) translateY(-4px);
+    }
+    @media (max-width: 1279px) {
+      display: block;
+    }
+    
+    // .burger-icon {
+    //   display: block;
+    //   background-color: $main-text-color;
+    //   width: 24px;
+    //   height: 2px;
+    //   top: 0;      
+    //   position: relative;
+    //   transition: top 0.3s, transform 0.3s ease 0.3s;
+      
+    //   &:not(:last-child) {
+    //     margin-bottom: 3px;
+    //   }
+    // }
+
+    // &.burger-open {
+    //   .burger-icon {
+    //     &:nth-of-type(2) {
+    //       background-color: $white-color;
+    //       transform: rotate(45deg);
+    //       top: 5px;
+    //     }
+
+    //     &:nth-of-type(3) {
+    //       transform: scale(0);
+    //     }
+
+    //     &:nth-of-type(4) {
+    //       background-color: $white-color;
+    //       transform: rotate(-45deg);
+    //       top: -5px;
+    //     }
+    //   }
+    // }
+  }
+}
+
+
+.burger {
+  svg {
+    height: 52px;
+    width: 75px;
+    @media (min-width:768px) {
+      height: 78px;
+      width: 120px;
+    }
+  }
+  
+  svg {
+    cursor: pointer;
+    transform: translate3d(0px, 0px, 0px);
+
+    &:not(:root) {overflow: hidden;}
+
+    path.top, 
+    path.bottom {
+      stroke-dasharray: 240px, 950px;
+    }
+    
+    path {
+      fill: none;
+      stroke: $main-text-color;
+      stroke-dashoffset: 0;
+      stroke-linecap: round;
+      stroke-width: 40px;
+      transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s, stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s, stroke 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s;
+    }
+
+    path.middle {
+      stroke-dasharray: 240px, 240px;
+    }
+
+    path {
+      fill: none;
+      stroke: $main-text-color;
+      stroke-dashoffset: 0;
+      stroke-linecap: round;
+      stroke-width: 40px;
+      transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s, stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s, stroke 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s;
+    }
+  }
+
+  &.burger-open path.top, 
+  &.burger-open path.bottom {
+    stroke-dashoffset: -650px;
+  }
+
+  path.top, 
+  path.bottom {
+    stroke-dasharray: 240px, 950px;
+  }
+
+  &.burger-open path.middle {
+    stroke-dasharray: 1px, 220px;
+    stroke-dashoffset: -115px;
+  }
+
+  &.burger-open path {
+    stroke: $white-color;
+    transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s, stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s, stroke 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s;
+  }
+}

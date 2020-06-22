@@ -1,74 +1,132 @@
 .header {
   padding: 30px 0 30px;
-
-  .nav-menu,
-  .header__nav-menu {
-    margin-bottom: 40px;
-    @include flex($sp-bt, $cnt, wrap, $rw);
-
-    .burger,
-    .header__burger {
-      .burger-icon {
-        display: block;
-        background-color: $main-text-color;
-        width: 24px;
-        height: 2px;
-
-        &:not(:last-child) {
-          margin-bottom: 3px;
-        }
-      }
-    }
+  background: url(../images/header_shape-sm.png) top no-repeat;
+  background-size: 100% 68%;
+  @media (min-width: 768px) {
+    background: url(../../images/header_shape.png) top no-repeat;
+    background-size: 102% 84%;
+    padding: 30px 0 50px;
+  }
+  @media (min-width: 1280px) {
+    padding: 40px 0 70px;
+  }
+  @media (min-width: 1680px) {
+    padding: 50px 0 100px;
   }
 
+  @import '../components/nav-menu.scss';
+    
+
   .hero {
-    margin-bottom: 60px;
+    margin-bottom: 90px;
 
-    .hero__title {
-      letter-spacing: 0.6px;
-      margin-bottom: 15px;
-    }
 
-    .hero__description {
-      margin-bottom: 20px;
+    .hero__wrap-text-and-btn {
+      .hero__title {
+        letter-spacing: 0.6px;
+        margin-bottom: 24px;
+        @media (min-width: 1280px) {
+          @include font($main-text-color, 4.8, 800, 58, 1.4);
+          padding: 0 calc(33% - 204px) 0 0;
 
-      .hero__description-text {
-        display: inline-block;
-        @include font($main-text-color, 1.5, 700, 20, 0.6);
+        }
+        @media (min-width: 1680px) {
+          @include font($main-text-color, 5.8, 800, 75, 1.75);
+        }
+  
+        .hero__title--br {
+          display: inline-block;
+          @media (min-width: 1680px) {
+            display: inline;
+            
+          }
+        }
       }
-
-      .hero__description-text--gray {
+  
+      .hero__description {
+        margin-bottom: 35px;
+  
+        .hero__description-text {
+          display: inline-block;
+          @include font($main-text-color, 1.5, 700, 20, 0.6);
+          @media (min-width: 1280px) {
+            @include font($main-text-color, 1.8, 700, 26, 0.9);
+          }
+          @media (min-width: 1280px) {
+            @include font($main-text-color, 2.1, 700, 33, 1);
+          }
+        }
+  
+        .hero__description-text--gray {
+          display: block;
+          color: #b9b9b9;
+        }
+  
+        .hero__description-text--orange {
+          color: $decor-color;
+  
+        }
+      }
+  
+      .hero__btn {
         display: block;
-        color: #b9b9b9;
-      }
+        margin: 0 auto 32px;
+        @media (min-width: 768px) {
+          margin: 0;
 
-      .hero__description-text--orange {
-        color: $decor-color;
-
+        }
       }
+      
     }
 
-    .hero__btn {
-      display: inline-block;
-      margin: 0 auto 25px;
-    }
 
     .hero__img {
       img {
-        margin: 0 auto;
+        padding: 0 calc(37% - 61px);
+        width: 100%;
+        height: auto;
+        @media (min-width: 768px) {
+          padding: 0;
+        }
+        @media (min-width: 768px) and (max-width: 1279px) {
+          max-width: 400px;
+        }
+        @media (min-width: 1280px) and (max-width: 1679px) {
+          max-width: 600px;
+        }
       }
+      @media (min-width: 768px) {
+        flex: 0 0 50%;
+
+      }
+    }
+    @media (min-width: 768px) {
+      @include flex($cnt, $cnt, nowrap, $rw);
     }
   }
 
   .advantages {
     .advantages__list {
-      @include flex($cnt, $cnt, wrap, $clm);
+      @include flex($cnt, $cnt, wrap, $rw);
       padding-left: 50px;
+      @media (min-width: 768px) {
+        padding-left: 25px;
+      }
 
       .advantages__item {
         position: relative;
         padding-left: 70px;
-        margin-bottom: 18px;
+
+        @media (max-width: 768px) {
+          &:not(:last-child) {
+            margin: 0 0 22px 0;
+          }
+        }
+        @media (min-width: 1680px) {
+          &:not(:last-child) {
+            margin: 0 25px 0 0;
+          }
+        }
 
         .advantages__icon {
           fill: $decor-color;
@@ -79,22 +137,59 @@
           height: 58px;
           padding-top: 8px;
           border: 2px solid $decor-color;
+          @media (min-width: 1280px) {
+            top: -23px;
+            left: -14px;
+            width: 104px;
+            height: 104px;
+            padding: 24px 5px 15px 0;
+          }
+          @media (min-width: 1680px) {
+            top: -17px;
+          }
         }
 
         &::after {
           content: '';
           position: absolute;
+          z-index: 1;
           top: 14px;
           left: 52px;
           width: 10px;
           height: 36px;
           background-color: $white-color;
+          @media (min-width: 1280px) {
+            top: -8px;
+            left: 80px;
+            width: 20px;
+            height: 73px;
+          }
+          @media (min-width: 1680px) {
+            top: -2px;
+          }
         }
 
         .advantages__text {
           @include font($main-text-color, 1.3, 700, 20, 0.65);
           width: 150px;
+          position: relative;
+          z-index: 2;
+          @media (min-width: 768px) {
+            @include font($main-text-color, 1.3, 700, 20, 0.65);
+            width: 150px;
 
+          }
+          @media (min-width: 1280px) {
+            @include font($main-text-color, 1.8, 700, 28, 0.9);
+            width: 320px;
+
+
+          }
+          @media (min-width: 1680px) {
+            @include font($main-text-color, 2.1, 700, 33.3, 1);
+            width: 350px;
+
+          }
         }
       }
     }

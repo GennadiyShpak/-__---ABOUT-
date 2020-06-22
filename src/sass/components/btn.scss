@@ -1,11 +1,23 @@
- .btn {
+.btn {
+  width: 250px;
+  height: 48px;
+  @include font($white-color, 1.2, 500, 48, 0.3);
+  background-color: $decor-color;  
+  text-transform: uppercase;
 
-   background-color: rgb(255, 107, 8);
-   width: 246px;
-   color: $white-color;
-   font-size: 1.1rem;
-   color: rgb(255, 255, 255);
-   font-weight: bold;
-   text-transform: uppercase;
-   height: 44px;
- }
+  &:focus{
+    background-color: $active-color;
+    outline: none;
+  }
+  @media (min-width: 1280px) {
+    width: 300px;
+    height: 68px;
+    @include font($white-color, 1.4, 500, 68, 0.3);
+
+  }
+  @media (min-width: 1680px) {
+    width: 350px;
+    height: 68px;
+    @include font($white-color, 1.6, 500, 68, 0.3);
+  }
+}

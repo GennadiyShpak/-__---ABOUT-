@@ -1,0 +1,103 @@
+.footer-tel {
+  @include flex($sp-bt,$cnt,nowrap,$clm);
+  padding-top: 26px;
+  
+  
+  .phone-link {
+    @include font($main-text-color, 1.8, 600, 30, 0.9);
+    margin-bottom: 20px;
+    
+    &::before {
+      display: inline-block;
+      content: '';
+      background: url(../images/icon-phone.svg) center no-repeat;
+      background-size: contain;
+      width: 25px;
+      height: 25px;
+      margin-right: 8px;
+      position: relative;
+      top: 8px;
+    }
+  }
+  
+  .instagram-link {
+    margin-bottom: 18px;
+  }
+  
+  @import '../components/logo.scss';
+  @media (min-width:568px) {
+    @include flex($sp-bt,$cnt,nowrap,$rw);
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    .logo {
+      order: -1;
+      flex: auto;
+      text-align: start;
+      transform: translateY(4px);
+    }
+
+    .phone-link {
+      margin: 0;
+      flex: 0 1 268px;
+
+      &::after {
+        display: inline-block;
+        content: '';
+        width: 1px;
+        height: 29px;
+        background-color: #e0e0e0;
+        margin-left: 30px;
+        transform: translateY(8px);
+      }
+    }
+
+    .instagram-link {
+      margin: 0 0 0 30px;
+      flex: auto;
+      transform: translateY(4px);
+    }
+  }
+  @media (min-width:768px) {
+    .phone-link {
+      @include font($main-text-color, 2, 600, 37, 1);
+      flex: 0 1 290px;
+    }
+    padding-top: 35px;
+    padding-bottom: 35px;
+
+    .instagram-link {
+      transform: translateY(2px);
+    }
+  }
+  @media (min-width:1280px) {
+    padding-top: 55px;
+    padding-bottom: 55px;
+
+    .phone-link {
+      @include font($main-text-color, 2.7, 600, 37, 1.3);
+      flex: 0 1 381px;
+
+      &::before {
+        width: 38px;
+        height: 38px;
+        margin-right: 8px;
+        top: 14px;
+      }
+
+      &::after {
+        transform: translateY(5px);
+      }
+
+      &:hover::before {
+        animation: swing 0.6s ease;
+        animation-iteration-count: 1;
+      }
+    }
+
+    .instagram-link {
+      transform: translateY(5px);
+    }
+  }  
+}
+
