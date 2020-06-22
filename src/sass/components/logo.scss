@@ -32,6 +32,9 @@
     text-transform: uppercase;
     line-height: 8px;
     letter-spacing: 0.69px;
+    @media (max-width: 767px) {
+      word-spacing: 3px;
+    }
     @media (min-width: 768px) {
       @include font($main-text-color, 0.9, 700, 12, 0.65);
     }
