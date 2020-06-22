@@ -4,6 +4,13 @@
   @include flex($sp-bt, $cnt, wrap, $rw);
 
   @import './logo.scss';
+  @media (min-width:768px) {
+    .logo {
+      flex: auto;
+      text-align: start;
+    }
+  }
+
 
   .wrapper-burger-menu {
     position: absolute;
@@ -33,13 +40,20 @@
       top: 115px;
       left: 50%;
       transform: translateX(-50%);
+      @media (min-width: 768px) {
+        padding-left: 10px;
+      }
       
       .header__menu-item {
         .header__menu-link {
           @include font($white-color, 2,700,40,1);
+          text-transform: uppercase;
           display: block;
           width: 100%;
           transition: $transition;
+          @media (min-width:768px) {
+            @include font($white-color, 2.8,700,60,1);
+          }
 
           &:focus {
             color: $decor-color;
@@ -47,24 +61,102 @@
         }
       }    
     }
+    @media (min-width: 1280px) {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translateX(0);
+      visibility: visible;
+      opacity: 1;
+      background: transparent;
+      width: auto;
+      overflow: hidden;
 
-    .header__menu-button {
-      position: absolute;
-      top: 320px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: transparent;
-      border: 2px solid $decor-color;
-      color: $decor-color;
-      font-weight: 700;
-      line-height: 44px;
-      text-align: center;
-
-      &:focus {
-        background-color: rgba(211, 84, 38, 0.651);
-        border: 2px solid $active-color;
-        color: $white-color;
+      &.burger-open {
+        visibility: visible;
+        opacity: 1;
+        left: 0;
+        transition: $transition;
       }
+      
+      .menu-list, 
+      .header__menu-list {
+        position: relative;
+        min-width: 275px;
+        margin-right: 22px;
+        top: 0;
+        left: 0;
+        transform: translateX(0);
+        @include flex($sp-bt, $cnt, wrap, $rw);
+        
+        .header__menu-item {
+          .header__menu-link {
+            @include font(#b9b9b9, 1.4,700,40,1);
+            display: block;
+            width: 100%;
+            padding: 22px;
+            transition: $transition;
+            @media (min-width: 1680px) {
+              font-size: 1.6rem;
+            }
+
+            &:hover {
+              color: $decor-color;
+            }
+          }
+        }    
+      }
+    }
+  }
+
+  .header__menu-button {
+    position: absolute;
+    z-index: 5;
+    top: 320px;
+    left: -110%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    border: 2px solid $decor-color;
+    color: $decor-color;
+    font-weight: 700;
+    line-height: 44px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: $transition;
+
+    &.burger-open {
+      visibility: visible;
+      opacity: 1;
+      left: 50%;
+      transition: $transition;
+    }
+
+    &:focus {
+      background-color: rgba(211, 84, 38, 0.651);
+      border: 2px solid $active-color;
+      color: $white-color;
+    }
+    @media (min-width:768px) {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translateX(0);
+      visibility: visible;
+      opacity: 1;
+      
+
+      &.burger-open {
+        visibility: visible;
+        opacity: 1;
+        left: 0;
+        transition: $transition;
+      }
+      @media (min-width:1280px) {
+        line-height: 64px;
+      }
+
+
     }
   }
   
@@ -73,7 +165,11 @@
     position: relative;
     z-index: 5;
     display: none;
-    @media (max-width: 768px) {
+    transform: translateX(20px) translateY(-4px);
+    @media (min-width:768px) {
+      transform: translateX(40px) translateY(-4px);
+    }
+    @media (max-width: 1279px) {
       display: block;
     }
     
@@ -116,15 +212,17 @@
 
 .burger {
   svg {
-    height: 40px;
-    width: 60px;
+    height: 52px;
+    width: 75px;
+    @media (min-width:768px) {
+      height: 78px;
+      width: 120px;
+    }
   }
   
   svg {
     cursor: pointer;
-    height: 50px;
     transform: translate3d(0px, 0px, 0px);
-    width: 80px;
 
     &:not(:root) {overflow: hidden;}
 
