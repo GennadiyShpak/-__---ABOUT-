@@ -97,30 +97,42 @@
     }
     &__name {
       @include font($main-text-color, 2.9, 800, 33, 1.5);
-      margin-bottom: 44px;
+      margin-bottom: 40px;
       &::after {
-        margin-top: 16px;
+        margin-top: 10px;
       }
     }
     &__list {
-      margin-bottom: 34px;
+      margin-bottom: 30px;
     }
     &__item-text {
-      @include font($main-text-color, 1.7, 700, 20, 0.83);
+      @include font($main-text-color, 1.7, 700, 29, 0.83);
     }
     &__item:not(:last-child) {
-      margin-bottom: 32px;
+      margin-bottom: 26px;
     }
     &__description {
-      @include font($secondary-text-color, 1.7, 400, 20, 0.83);
-      margin-bottom: 32px;
+      @include font($secondary-text-color, 1.7, 400, 24, 0.83);
+      margin-bottom: 22px;
     }
     &__link {
-      @include font($decor-color, 1.7, 400, 29, 0.83);
-      text-decoration: underline;
+      @include font($decor-color, 1.7, 400, 24, 0.83);
     }
   }
   .description-before::before {
-    margin-bottom: 36px;
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: 1680px) {
+  .teacher {
+    padding-bottom: 138px;
+    &__title {
+      @include font($main-text-color, 4.6, 800, 62, 2.3);
+      margin-bottom: 68px;
+    }
+    &__description-wrapper {
+      width: 664px;
+    }
   }
 }
