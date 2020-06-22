@@ -25,6 +25,7 @@
         background: url(../images/icon-campfire.svg) center no-repeat;
         background-size: contain;
       }
+      &--star,
       &--span {
         color: #ff6b08;
       }
@@ -56,6 +57,33 @@
     }
     &__list {
       padding: 38px 54px 32px 60px;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .guarantee {
+    padding: 0 35px 94px;
+    &__title {
+      @include font($main-text-color, 4.2, 800, 48, 2.1);
+      margin-bottom: 36px;
+    }
+    &__list {
+      padding: 48px 137px;
+    }
+    &__item:not(:last-child) {
+      padding-bottom: 32px;
+    }
+    &__item-text {
+      @include font($main-text-color, 1.8, 500, 29, 0.9);
+      &::before {
+        top: 7px;
+        left: -41px;
+        background-size: 24px;
+      }
+      &--span {
+        display: block;
+      }
     }
   }
 }
