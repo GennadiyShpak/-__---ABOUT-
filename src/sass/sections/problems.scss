@@ -1,39 +1,13 @@
-.problems-menu {
-  &__list {
-    box-shadow: 4px 7px 16px 6px rgba(29, 29, 27, 0.04);
-    background-color: $white-color;
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  &__item {
-    max-width: 82%;
-    padding-left: 28px;
-    @include font($main-text-color, 1.3, 700, 20, 0.65);
-
-    &::before {
-      margin-bottom: -14px;
-    }
-  }
-}
-
 .counter::before {
   display: block;
   margin-left: 40px;
-  font-size: 1.4rem;
   color: $decor-color;
 }
 
-.counter {
-  @include font($main-text-color, 1.3, 700, 20, 0.65);
-}
-
 .problems {
-  background: linear-gradient(
-    to bottom,
-    $main-text-color 78%,
-    $white-color 78%
-  );
+  background: linear-gradient(to bottom,
+      $main-text-color 76%,
+      $white-color 76%);
   padding-top: 50px;
   padding-bottom: 20px;
 
@@ -41,7 +15,7 @@
     counter-increment: problems_counter;
 
     &::before {
-      content: '0' counter(problems_counter);
+      content: '0'counter(problems_counter);
     }
   }
 }
@@ -53,40 +27,28 @@
 
 .section-title {
   &_light {
-    line-height: 32px;
     padding-right: 20px;
   }
 
   &_item {
     color: $decor-color;
-    padding-right: 6px;
   }
 }
 
 @media (min-width: 768px) {
   .problems {
     background-image: url(../images/fire.png),
-      linear-gradient(to bottom, $main-text-color 364px, $white-color 365px);
+      linear-gradient(to bottom, $main-text-color 350px, $white-color 350px);
     background-repeat: no-repeat;
     padding-top: 50px;
     background-position: right top 25%;
   }
 
   .problems-title_wrapper {
-    max-width: 57%;
+    max-width: 520px;
     margin-bottom: 24px;
   }
 
-  .problems-menu {
-    &__list {
-      @include flex($sp-bt, flex-start, wrap, $rw);
-      padding: 56px 108px 52px 78px;
-    }
-
-    &__item {
-      width: 46%;
-    }
-  }
 }
 
 @media (min-width: 1280px) {
@@ -94,13 +56,13 @@
     background-image: url(../images/fire1280.png),
       linear-gradient(to bottom, $main-text-color 364px, $white-color 365px);
     background-repeat: no-repeat;
-    padding-top: 118px;
+    padding-top: 75px;
     background-position: right bottom 25%;
   }
 
   .problems-title_wrapper {
     max-width: 57%;
-    margin-bottom: 24px;
+    margin-bottom: 50px;
   }
 
   .problems-menu {
