@@ -1,70 +1,75 @@
-@media(min-resolution:192dpi),
-(min-resolution:2dppx) {
-  background-image: url(../images/form_bg-sm.png);
-}
+@media (max-width: 767px) {
+  .form {
+    background-color: $main-text-color;
+    width: 320px;
 
-background-repeat: no-repeat;
-margin: 0 auto;
-align-items: center;
+    @media(min-resolution:192dpi),
+    (min-resolution:2dppx) {
+      background-image: url(../images/form_bg-sm.png);
+    }
 
-.form_input {
-  margin: 0 auto;
-  text-align: center;
-  padding-bottom: 40px;
-}
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    align-items: center;
 
-.name {
-  margin-bottom: 18px;
-}
+    .form_input {
+      margin: 0 auto;
+      text-align: center;
+      padding-bottom: 40px;
+    }
 
-.tel {
-  margin-bottom: 55px;
-}
+    .name {
+      margin-bottom: 18px;
+    }
 
-&_text {
-  font-size: 1.4rem;
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-  line-height: 1.86;
-  width: 222px;
-  text-align: center;
+    .tel {
+      margin-bottom: 55px;
+    }
 
-  margin: 0 auto;
-  padding: 60px 0px 30px;
+    &_text {
+      font-size: 1.4rem;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      line-height: 1.86;
+      width: 222px;
+      text-align: center;
 
-  &--style {
-    color: $decor-color;
+      margin: 0 auto;
+      padding: 60px 0px 30px;
+
+      &--style {
+        color: $decor-color;
+      }
+    }
   }
-}
-}
 
-.form_subtext {
-  font-size: 1.1rem;
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-  line-height: 1.818;
-  text-align: center;
-  width: 254px;
-  padding-bottom: 30px;
-  margin: 0 auto;
-}
+  .form_subtext {
+    font-size: 1.1rem;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 1.818;
+    text-align: center;
+    width: 254px;
+    padding-bottom: 30px;
 
-.input {
-  height: 50px;
-  width: 280px;
-  background-color: transparent;
-  border: 1px solid $white-color;
-  padding-left: 23px;
-  font-size: 1.3rem;
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-  line-height: 2.885;
-  margin: 0 auto;
-
-  &::placeholder {
-    color: $white-color;
   }
-}
+
+  .input {
+    height: 50px;
+    width: 280px;
+    background-color: transparent;
+    border: 1px solid $white-color;
+    padding-left: 23px;
+    font-size: 1.3rem;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 2.885;
+    margin: 0 auto;
+
+    &::placeholder {
+      color: $white-color;
+    }
+  }
 }
 
 @media (min-width: 768px) {
@@ -284,7 +289,7 @@ align-items: center;
       color: rgb(255, 255, 255);
       font-weight: bold;
       line-height: 2.885;
-      margin: 0 auto;
+
 
       &_item {
         margin-bottom: 30px;
