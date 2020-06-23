@@ -68,8 +68,9 @@
       margin-bottom: 32px;
     }
     &__photo {
-      width: 247px;
-      height: 321px;
+      width: 60%;
+      height: 60%;
+      max-width: 430px;
       margin-right: 44px;
     }
     &__description-wrapper {
