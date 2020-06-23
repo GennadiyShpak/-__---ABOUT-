@@ -47,7 +47,12 @@
   &.burger-open {
     .logo__link {
       color: $white-color;
+      
+      .logo__text {
+        color: $white-color;
+      }
+      @media (min-width: 768px) {
+      }
     }
-
   }
 }

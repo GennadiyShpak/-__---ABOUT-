@@ -6,6 +6,9 @@
   }
   &__container {
     padding: 0;
+    @media (min-width: 530px) and (max-width: 767px) {
+      padding: 0 20px;
+    }
   }
   &__list {
     background-color: #f1f1f1;
@@ -115,6 +118,7 @@
       &::before {
         top: 2px;
         left: -41px;
+        width: 22px;
         height: 36px;
         background-size: 30px;
       }

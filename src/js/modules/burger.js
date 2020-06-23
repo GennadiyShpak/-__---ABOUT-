@@ -7,9 +7,9 @@ const body = document.querySelector('body');
 const anchors = document.querySelectorAll('a[href*="#"]')
 
 body.addEventListener('click', (event) => {
-
+  
   let target = event.target;
-
+  
   if (target.closest('.burger')) {
     burger.classList.toggle('burger-open');
     logo.classList.toggle('burger-open');
@@ -17,33 +17,42 @@ body.addEventListener('click', (event) => {
     button.classList.toggle('burger-open');
     body.classList.toggle('lock');
   } else if (target.closest('.header__menu-button')) {
-    setTimeout(() => {
-      burger.classList.toggle('burger-open');
-      logo.classList.toggle('burger-open');
-      menuNav.classList.toggle('burger-open');
-      body.classList.toggle('lock');      
-
-      for (let anchor of anchors) {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault()
-          
-          const blockID = anchor.getAttribute('href').substr(1)
-          
-          document.getElementById(blockID).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          })
+    burger.classList.remove('burger-open');
+    logo.classList.remove('burger-open');
+    menuNav.classList.remove('burger-open');
+    body.classList.remove('lock');      
+    
+    for (let anchor of anchors) {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault()
+        
+        const blockID = anchor.getAttribute('href').substr(1)
+        
+        document.getElementById(blockID).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
         })
-      }  
-    }, 500);
+      })
+    }  
   } else {
     return;
-  }
-  
+  }  
 });
 
-// $('#sandwichmenu').on('click', function(e) {
-//   e.preventDefault();
-//   $('#sandwichmenu').toggleClass("active");
-//   $('.js_menu').toggleClass("active");
-// });
+var closeBurger = function (mediaQuery) {
+  if (mediaQuery.matches) {
+    burger.classList.remove('burger-open');
+    logo.classList.remove('burger-open');
+    menuNav.classList.remove('burger-open');
+    body.classList.remove('lock'); 
+  } else {
+    burger.classList.remove('burger-open');
+    logo.classList.remove('burger-open');
+    menuNav.classList.remove('burger-open');
+    body.classList.remove('lock'); 
+  }
+},
+media = window.matchMedia('all and (max-width: 1279px)');
+
+closeBurger(media);
+media.addListener(closeBurger);

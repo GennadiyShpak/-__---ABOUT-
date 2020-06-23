@@ -47,7 +47,6 @@
       .header__menu-item {
         .header__menu-link {
           @include font($white-color, 2,700,40,1);
-          text-transform: uppercase;
           display: block;
           width: 100%;
           transition: $transition;
@@ -93,6 +92,7 @@
           .header__menu-link {
             @include font(#b9b9b9, 1.4,700,40,1);
             display: block;
+            text-transform: uppercase;
             width: 100%;
             padding: 22px;
             transition: $transition;
@@ -230,11 +230,17 @@
     cursor: pointer;
     transform: translate3d(0px, 0px, 0px);
 
-    &:not(:root) {overflow: hidden;}
+    &:not(:root) {
+      overflow: hidden;
+    }
 
     path.top, 
     path.bottom {
       stroke-dasharray: 240px, 950px;
+    }
+
+    path.top {
+      transform: translate(0px, 25px);      
     }
     
     path {
@@ -242,7 +248,7 @@
       stroke: $main-text-color;
       stroke-dashoffset: 0;
       stroke-linecap: round;
-      stroke-width: 40px;
+      stroke-width: 32px;
       transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s, stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s, stroke 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s;
     }
 
@@ -255,7 +261,7 @@
       stroke: $main-text-color;
       stroke-dashoffset: 0;
       stroke-linecap: round;
-      stroke-width: 40px;
+      stroke-width: 32px;
       transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s, stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s, stroke 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s;
     }
   }
@@ -263,6 +269,14 @@
   &.burger-open path.top, 
   &.burger-open path.bottom {
     stroke-dashoffset: -650px;
+  }
+
+  &.burger-open path.top {
+    transform: translate(0px, 1px);  
+  }
+
+  &.burger-open path.bottom {
+    transform: translate(480px, 319px) scale(1, -1) translate(-480px, -318px);
   }
 
   path.top, 
