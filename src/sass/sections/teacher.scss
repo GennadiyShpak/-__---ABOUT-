@@ -50,8 +50,11 @@
     text-decoration: underline;
   }
 }
-.description-before::before {
-  margin-bottom: 16px;
+.description-before {
+  padding: 0 15px;
+  &::before {
+    margin-bottom: 16px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -79,6 +82,9 @@
         margin-top: 12px;
       }
     }
+  }
+  .description-before {
+    padding: 0;
   }
 }
 @media (min-width: 1280px) {
