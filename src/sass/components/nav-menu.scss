@@ -154,6 +154,12 @@
       }
       @media (min-width:1280px) {
         line-height: 64px;
+
+        &:hover {
+          background-color: $active-color;
+          border: 2px solid $active-color;
+          color: $white-color;
+        }
       }
 
 

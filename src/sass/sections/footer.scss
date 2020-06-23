@@ -7,4 +7,8 @@
 .footer-text {
   @include font ($secondary-text-color, 1.1, 500, 16, 0.55);
   text-align: center;
+  @media (min-width: 1280px) {
+    text-align: start;
+    @include font ($secondary-text-color, 1.5, 500, 37, 0.7);
+  }
 }
