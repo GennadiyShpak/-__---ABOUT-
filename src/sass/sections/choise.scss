@@ -53,3 +53,12 @@
     padding-bottom: 48px;
   }
 }
+
+@media (min-width: 1680px) {
+  .choice {
+    background-image: linear-gradient(to bottom,
+        $main-text-color 50%,
+        $white-color 50%);
+    padding-bottom: 48px;
+  }
+}

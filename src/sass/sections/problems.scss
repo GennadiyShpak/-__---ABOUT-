@@ -32,11 +32,11 @@
 @media (min-width: 768px) {
   .problems {
     background-image: url(../images/fire.png),
-      linear-gradient(to bottom, $main-text-color 61%, $white-color 61%);
+      linear-gradient(to bottom, $main-text-color 56%, $white-color 56%);
     background-repeat: no-repeat;
     padding-top: 50px;
     padding-bottom: 75px;
-    background-position: right top 16%;
+    background-position: right top 14%;
   }
 
   .problems-title_wrapper {
@@ -48,7 +48,7 @@
 @media (min-width: 1280px) {
   .problems {
     background-image: url(../images/fire1280.png),
-      linear-gradient(to bottom, $main-text-color 73%, $white-color 73%);
+      linear-gradient(to bottom, $main-text-color 80%, $white-color 80%);
     background-repeat: no-repeat;
     padding-top: 65px;
     padding-bottom: 75px;
@@ -63,7 +63,32 @@
   .problems-menu {
     &__list {
       @include flex($sp-bt, flex-start, wrap, $rw);
-      padding-left: 101px;
+      padding-left: 100px;
+    }
+
+    &__item {
+      width: 46%;
+    }
+  }
+}
+
+@media (min-width: 1680px) {
+  .problems {
+    background-image: url(../images/fire1680.png),
+      linear-gradient(to bottom, $main-text-color 80%, $white-color 80%);
+    background-repeat: no-repeat;
+    padding-top: 105px;
+    background-position: right top 38%;
+  }
+
+  .problems-title_wrapper {
+    max-width: 830px;
+    margin-bottom: 70px;
+  }
+
+  .problems-menu {
+    &__list {
+      padding-left: 100px;
     }
 
     &__item {
