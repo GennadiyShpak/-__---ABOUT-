@@ -1,7 +1,7 @@
 .how-we-do {
   display: flex;
   justify-content: center;
-  padding-bottom: 54px;
+  padding: 40px 0 54px;
 
   &__title {
     width: max-content;
@@ -69,12 +69,14 @@
     &__list {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
+      justify-content: space-evenly;
       max-width: 905px;
+      margin: 0 20px;
     }
 
     &__card {
-      width: 47.5%;
+      width: 45%;
+      margin-bottom: 23px;
     }
   }
 }
@@ -95,8 +97,7 @@
     }
 
     &__title {
-      margin-left: 10px;
-      padding-bottom: 50px;
+      margin-left: 20px;
       font-size: 4.2rem;
     }
 
