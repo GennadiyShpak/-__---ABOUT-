@@ -23,7 +23,7 @@
     }
   }
   &__list {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
   &__item {
     background: url(../images/icon-check.svg) top left -5px no-repeat;
@@ -43,7 +43,7 @@
   }
   &__description {
     @include font($secondary-text-color, 1.1, 400, 20, 0.55);
-    margin-bottom: 22px;
+    margin-bottom: 16px;
   }
   &__link {
     @include font($decor-color, 1.1, 400, 29, 0.55);
@@ -53,7 +53,7 @@
 .description-before {
   padding: 0 15px;
   &::before {
-    margin-bottom: 16px;
+    margin-bottom: 10px;
   }
 }
 
@@ -68,7 +68,7 @@
       margin-bottom: 32px;
     }
     &__photo {
-      width: 60%;
+      width: 36%;
       height: 60%;
       max-width: 430px;
       margin-right: 44px;
@@ -77,10 +77,10 @@
       width: 396px;
     }
     &__name {
-      @include font($main-text-color, 2, 800, 29, 1);
-      margin-bottom: 26px;
+      @include font($main-text-color, 2, 800, 20, 1);
+      margin-bottom: 18px;
       &::after {
-        margin-top: 12px;
+        margin-top: 14px;
       }
     }
   }
@@ -96,6 +96,7 @@
       margin-bottom: 52px;
     }
     &__photo {
+      max-width: 494px;
       width: 494px;
       height: 644px;
       margin-right: 86px;
