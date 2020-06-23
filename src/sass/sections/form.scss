@@ -1,3 +1,4 @@
+
 @media (min-width: 320px) {
   .form {
     background-color: $main-text-color;
@@ -7,6 +8,8 @@
     background-repeat: no-repeat;
     padding-top: 60px;
     padding-bottom: 40px;
+
+    
 
     @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url(../images/form_bg-sm@2x.png);
@@ -124,6 +127,9 @@
     &_input {
       width: 624px;
     }
+    &__btn {
+    width: 350px;
+  }
   }
   .input {
     height: 72px;
@@ -135,9 +141,6 @@
   }
   .tel {
     margin-bottom: 56px;
-  }
-  .btn-desktop {
-    width: 350px;
   }
 }
 
@@ -161,5 +164,18 @@
       width: 760px;
       margin-bottom: 54px;
     }
+  }
+}
+
+.form_input {
+  &.open-form {
+    position: fixed;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: content-box;
+    padding: 100%;
+    background: rgba(0, 0, 0, 0.93);
   }
 }
