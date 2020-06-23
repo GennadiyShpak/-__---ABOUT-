@@ -30,11 +30,10 @@
 .counter::before {
   display: block;
   margin-left: 40px;
-  color: $decor-color;
-  @include font($main-text-color, 1.4, 700, 20, 0.7);
+  @include font($decor-color, 1.4, 700, 20, 0.7);
 
   @media (min-width: 1280px) {
-    @include font($main-text-color, 2.5, 700, 30, 1.04);
+    @include font($decor-color, 2.5, 700, 30, 1.04);
   }
 }
 
@@ -64,7 +63,7 @@
     max-width: 88%;
 
     &:nth-last-child(n+2) {
-      margin-bottom: 20px;
+      margin-bottom: 38px;
     }
 
     @media (min-width: 768px) {
@@ -73,6 +72,10 @@
 
     &::before {
       margin-bottom: -13px;
+
+      @media (min-width:1280px) {
+        margin-bottom: -17px;
+      }
     }
   }
 
@@ -88,7 +91,7 @@
 
     &__list {
       @include flex($sp-bt, flex-start, wrap, $rw);
-      padding: 55px 88px 51px 101px;
+      padding: 36px 88px 51px 101px;
     }
 
     &__item {
