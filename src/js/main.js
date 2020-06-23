@@ -2,3 +2,4 @@
 //= './modules/animated-scroll.js'
 //= './modules/burger.js'
 //= './modules/required-tel.js'
+//= './modules/modal-form.js'
