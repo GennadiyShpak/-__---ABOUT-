@@ -43,7 +43,6 @@
     padding-left: 23px;
     @include font($white-color, 1.3, 600, 28, 0);
     margin: 0 auto;
-
     &::placeholder {
       color: $white-color;
     }
@@ -53,6 +52,18 @@
   }
   .tel {
     margin-bottom: 55px;
+  }
+  .form_input {
+    &.open-form {
+      position: fixed;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-sizing: content-box;
+      padding: 100%;
+      background: rgba(0, 0, 0, 0.93);
+    }
   }
 }
 
