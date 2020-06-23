@@ -1,15 +1,9 @@
-.counter::before {
-  display: block;
-  margin-left: 40px;
-  color: $decor-color;
-}
-
 .problems {
   background: linear-gradient(to bottom,
       $main-text-color 76%,
       $white-color 76%);
   padding-top: 50px;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 
   &_counter {
     counter-increment: problems_counter;
@@ -38,31 +32,32 @@
 @media (min-width: 768px) {
   .problems {
     background-image: url(../images/fire.png),
-      linear-gradient(to bottom, $main-text-color 350px, $white-color 350px);
+      linear-gradient(to bottom, $main-text-color 61%, $white-color 61%);
     background-repeat: no-repeat;
     padding-top: 50px;
-    background-position: right top 25%;
+    padding-bottom: 75px;
+    background-position: right top 16%;
   }
 
   .problems-title_wrapper {
     max-width: 520px;
     margin-bottom: 24px;
   }
-
 }
 
 @media (min-width: 1280px) {
   .problems {
     background-image: url(../images/fire1280.png),
-      linear-gradient(to bottom, $main-text-color 364px, $white-color 365px);
+      linear-gradient(to bottom, $main-text-color 73%, $white-color 73%);
     background-repeat: no-repeat;
-    padding-top: 75px;
-    background-position: right bottom 25%;
+    padding-top: 65px;
+    padding-bottom: 75px;
+    background-position: right top 16%;
   }
 
   .problems-title_wrapper {
-    max-width: 57%;
-    margin-bottom: 50px;
+    max-width: 786px;
+    margin-bottom: 46px;
   }
 
   .problems-menu {
