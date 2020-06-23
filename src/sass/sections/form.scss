@@ -1,7 +1,11 @@
+
+
 @media (max-width: 767px) {
   .form {
     background-color: $main-text-color;
     width: 320px;
+
+    
 
     @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url(../images/form_bg-sm.png);
@@ -287,5 +291,18 @@
         color: $white-color;
       }
     }
+  }
+}
+
+.form_input {
+  &.open-form {
+    position: fixed;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: content-box;
+    padding: 100%;
+    background: rgba(0, 0, 0, 0.93);
   }
 }
