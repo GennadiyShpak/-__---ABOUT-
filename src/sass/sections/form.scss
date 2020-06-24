@@ -1,59 +1,41 @@
 
-
-@media (max-width: 767px) {
+@media (min-width: 320px) {
   .form {
     background-color: $main-text-color;
-    width: 320px;
+    background-image: url(../images/form_bg-sm.png);
+    background-size: cover;
+    min-width: 320px;
+    background-repeat: no-repeat;
+    padding-top: 60px;
+    padding-bottom: 40px;
 
     
 
     @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url(../images/form_bg-sm.png);
+      background-image: url(../images/form_bg-sm@2x.png);
     }
-
-    background-repeat: no-repeat;
-    margin: 0 auto;
-    align-items: center;
-
-    .form_input {
+    &-wrapper {
       margin: 0 auto;
       text-align: center;
-      padding-bottom: 40px;
-    }
-
-    .name {
-      margin-bottom: 18px;
-    }
-
-    .tel {
-      margin-bottom: 55px;
     }
 
     &_text {
-      font-size: 1.4rem;
-      color: rgb(255, 255, 255);
-      font-weight: bold;
-      line-height: 1.86;
-      width: 222px;
-      text-align: center;
-
-      margin: 0 auto;
-      padding: 60px 0px 30px;
+      @include font($white-color, 1.4, 800, 26, 0);
+      min-width: 222px;
+      margin: 0 auto 26px;
 
       &--style {
         color: $decor-color;
       }
     }
-  }
-
-  .form_subtext {
-    font-size: 1.1rem;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    line-height: 1.818;
-    text-align: center;
-    width: 254px;
-    padding-bottom: 30px;
+    &_subtext {
+      @include font($white-color, 1.1, 600, 20, 0);
+      min-width: 254px;
+      margin: 0 auto 28px;
+    }
+    &_input {
+      margin: 0 auto;
+    }
   }
 
   .input {
@@ -62,234 +44,125 @@
     background-color: transparent;
     border: 1px solid $white-color;
     padding-left: 23px;
-    font-size: 1.3rem;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    line-height: 2.885;
+    @include font($white-color, 1.3, 600, 28, 0);
     margin: 0 auto;
-
     &::placeholder {
       color: $white-color;
+    }
+  }
+  .name {
+    margin-bottom: 18px;
+  }
+  .tel {
+    margin-bottom: 55px;
+  }
+  .form_input {
+    &.open-form {
+      position: fixed;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-sizing: content-box;
+      padding: 100%;
+      background: rgba(0, 0, 0, 0.93);
     }
   }
 }
 
 @media (min-width: 768px) {
   .form {
-    background-color: $main-text-color;
+    background-image: url(../images/form_bg-md.png);
+    padding-bottom: 62px;
 
     @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url(../images/form_bg-md.png);
+      background-image: url(../images/form_bg-md@2x.png);
     }
-
-    background-repeat: no-repeat;
-    margin: 0 auto;
-    align-items: center;
-
-    .form_input {
-      margin: 0 auto;
-      text-align: center;
-      padding-bottom: 40px;
+    &_text {
+      @include font($white-color, 2.2, 800, 38, 1.1);
+      margin-bottom: 30px;
+      width: 548px;
+    }
+    &_subtext {
+      @include font($white-color, 1.5, 600, 20, 0.75);
+      width: 456px;
+      margin-bottom: 40px;
+    }
+    &_input {
       width: 404px;
     }
-
-    .name {
-      margin-bottom: 18px;
-    }
-
-    .tel {
-      margin-bottom: 55px;
-    }
-
-    &_text {
-      font-size: 2.2rem;
-      color: rgb(255, 255, 255);
-      font-weight: bold;
-      line-height: 1.729;
-      width: 545px;
-      text-align: center;
-      margin: 0 auto;
-      padding: 60px 0px 30px;
-
-      &--style {
-        color: $decor-color;
-      }
-    }
   }
-
-  .form_subtext {
-    font-size: 1.5rem;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    line-height: 1.333;
-    width: 428px;
-    padding-bottom: 30px;
-    margin: 0 auto;
-  }
-
   .input {
     height: 70px;
     width: 400px;
-    background-color: transparent;
-    border: 1px solid $white-color;
-    padding-left: 23px;
-    font-size: 1.3rem;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    line-height: 2.885;
-    margin: 0 auto;
-
-    &::placeholder {
-      color: $white-color;
-    }
+    @include font($white-color, 1.3, 600, 38, 0.65);
+  }
+  .name {
+    margin-bottom: 20px;
+  }
+  .tel {
+    margin-bottom: 34px;
   }
 }
 
 @media (min-width: 1280px) {
   .form {
-    background-color: $main-text-color;
+    background-image: url(../images/form_bg.png);
+    padding-top: 80px;
+    padding-bottom: 44px;
 
     @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url(../images/form_bg.png);
+      background-image: url(../images/form_bg@2x.png);
     }
-
-    background-repeat: no-repeat;
-    margin: 0 auto;
-    align-items: center;
-
-    .form_input {
-      margin: 0 auto;
-      text-align: center;
-      padding-bottom: 85px;
-      width: 625px;
-    }
-
-    .name {
-      margin-bottom: 18px;
-    }
-
-    .tel {
-      margin-bottom: 55px;
-    }
-
     &_text {
-      font-size: 3.8rem;
-      color: rgb(255, 255, 255);
-      font-weight: bold;
-      line-height: 1.334;
-      width: 943px;
-      text-align: center;
-      margin: 0 auto;
-      padding: 90px 0px 30px;
-
-      &--style {
-        color: $decor-color;
-      }
+      @include font($white-color, 3.8, 800, 50, 1.88);
+      margin-bottom: 44px;
+      width: 946px;
     }
+    &_subtext {
+      @include font($white-color, 1.8, 600, 24, 0.9);
+      width: 548px;
+      margin-bottom: 50px;
+    }
+    &_input {
+      width: 624px;
+    }
+    &__btn {
+    width: 350px;
   }
-
-  .form_subtext {
-    font-size: 1.5rem;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    line-height: 1.333;
-    text-align: center;
-    width: 428px;
-    padding-bottom: 50px;
-    margin: 0 auto;
-    display: block;
   }
-
   .input {
-    height: 70px;
-    width: 625px;
-    background-color: transparent;
-    border: 1px solid $white-color;
-    padding-left: 23px;
-    font-size: 1.3rem;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    line-height: 2.885;
-    margin: 0 auto;
-
-    &::placeholder {
-      color: $white-color;
-    }
+    height: 72px;
+    width: 620px;
+    @include font($white-color, 2.1, 600, 38, 1.04);
+  }
+  .name {
+    margin-bottom: 28px;
+  }
+  .tel {
+    margin-bottom: 56px;
   }
 }
 
 @media (min-width: 1680px) {
   .form {
-    background-color: $main-text-color;
+    background-image: url(../images/form_bg-xl.png);
+    width: 1680px;
+    padding-top: 126px;
+    padding-bottom: 196px;
 
     @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url(../images/form-hellen.png);
+      background-image: url(../images/form_bg-xl@2x.png);
     }
-
-    background-repeat: no-repeat;
-    margin: 0 auto;
-    align-items: center;
-
-    .form_input {
-      margin: 0 auto;
-      text-align: center;
-      padding-bottom: 85px;
-      width: 625px;
+    &_text {
+      @include font($white-color, 3.8, 800, 50, 1.88);
+      margin-bottom: 62px;
+      width: 946px;
     }
-
-    .name {
-      margin-bottom: 30px;
-    }
-
-    .tel {
-      margin-bottom: 55px;
-
-      &_text {
-        font-size: 3.8rem;
-        color: rgb(255, 255, 255);
-        font-weight: bold;
-        line-height: 1.334;
-        width: 943px;
-        text-align: center;
-        margin: 0 auto;
-        padding: 90px 0px 30px;
-
-        &--style {
-          color: $decor-color;
-        }
-      }
-    }
-
-    .form_subtext {
-      font-size: 1.5rem;
-      color: rgb(255, 255, 255);
-      font-weight: bold;
-      line-height: 1.333;
-      text-align: center;
-      width: 428px;
-      padding-bottom: 50px;
-      margin: 0 auto;
-      display: block;
-    }
-
-    .input {
-      height: 70px;
-      width: 622px;
-      background-color: transparent;
-      border: 1px solid $white-color;
-      padding-left: 23px;
-      font-size: 1.3rem;
-      color: rgb(255, 255, 255);
-      font-weight: bold;
-      line-height: 2.885;
-
-      &_item {
-        margin-bottom: 30px;
-      }
-
-      &::placeholder {
-        color: $white-color;
-      }
+    &_subtext {
+      @include font($white-color, 2.5, 600, 37, 1.25);
+      width: 760px;
+      margin-bottom: 54px;
     }
   }
 }
