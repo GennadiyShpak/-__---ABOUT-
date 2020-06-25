@@ -2,6 +2,9 @@
   @media (max-width: 767px) {
     padding-top: 30px;
     padding-bottom: 126px;
+    .section-title-p::after {
+      content: 'наших';
+    }
   }
 
   @media (max-width: 1279px) {
@@ -63,8 +66,13 @@
   }
 
   .slider__img {
-    @media (min-width: 768px) {
-      border-radius: 50%;
+    width: 82px;
+    margin: 0 auto;
+    margin-bottom: 23px;
+    border-radius: 50%;
+
+    @media (min-width: 1280px) {
+      width: 145px;
     }
   }
 
@@ -85,7 +93,14 @@
 .photo_wrapper {
   @media (min-width: 768px) {
     margin-right: 44px;
-    padding-top: 16px;
+    // padding-top: 16px;
+    margin-bottom: 38px;
+  }
+  @media (min-width: 1280px) {
+    margin-bottom: 72px;
+  }
+  @media (min-width: 1680px) {
+    margin-bottom: 40px;
   }
 }
 
@@ -99,11 +114,10 @@
   }
 
   @media (min-width: 768px) {
-    align-self: start;
+    text-align: left;
   }
 }
 
-.slider__img,
 .social-logo {
   margin: 0 auto;
   margin-bottom: 23px;
@@ -121,21 +135,18 @@
 }
 
 .slider-card__description {
-  display: inline-block;
-  height: 120px;
+  display: inline;
   @include font($main-text-color, 1.1, 500, 20, 0.55);
-  overflow: hidden;
 
   @media (min-width: 768px) {
     text-align: justify;
-    overflow: visible;
     height: auto;
   }
   @media (min-width: 1280px) {
     @include font($main-text-color, 1.7, 500, 30, 0.9);
   }
 }
-.not-visible::before {
+.slider-card__description::after {
   display: inline-block;
   color: $main-text-color;
   content: '...';
@@ -143,9 +154,21 @@
     content: '';
   }
 }
+.not-visible {
+  @include font($main-text-color, 1.1, 500, 20, 0.55);
+  display: none;
+
+  @media (min-width: 768px) {
+    display: inline;
+  }
+  @media (min-width: 1280px) {
+    @include font($main-text-color, 1.7, 500, 30, 0.9);
+  }
+}
 
 .slider-cards_link {
   @include font($decor-color, 1.1, 500, 20, 0.55);
+  text-decoration: underline;
 
   @media (min-width: 1280px) {
     @include font($decor-color, 1.7, 800, 30, 0.83);
