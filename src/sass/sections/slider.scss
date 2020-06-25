@@ -13,7 +13,7 @@
     padding-bottom: 192px;
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: 1680px) {
     padding-bottom: 222px;
   }
 }
@@ -62,10 +62,18 @@
     }
   }
 
-  .slider__img {
+  .title_not-visible p::after {
+    content: 'наших';
+    display: inline-block;
+    color: $main-text-color;
+
     @media (min-width: 768px) {
-      border-radius: 50%;
+      content: '';
     }
+  }
+
+  .slider__img {
+    border-radius: 50%;
   }
 
   &__title {
@@ -131,14 +139,17 @@
     overflow: visible;
     height: auto;
   }
+
   @media (min-width: 1280px) {
     @include font($main-text-color, 1.7, 500, 30, 0.9);
   }
 }
+
 .not-visible::before {
   display: inline-block;
   color: $main-text-color;
   content: '...';
+
   @media (min-width: 768px) {
     content: '';
   }
@@ -146,6 +157,7 @@
 
 .slider-cards_link {
   @include font($decor-color, 1.1, 500, 20, 0.55);
+  text-decoration: underline;
 
   @media (min-width: 1280px) {
     @include font($decor-color, 1.7, 800, 30, 0.83);
