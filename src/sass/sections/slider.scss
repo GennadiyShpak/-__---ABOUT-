@@ -17,6 +17,11 @@
     padding-bottom: 222px;
   }
 }
+@media (min-width: 768px) {
+  .section-title-span {
+    display: none;
+  }
+}
 
 .slider {
   padding-top: 22px;
@@ -62,13 +67,14 @@
     }
   }
 
-  .title_not-visible p::after {
-    content: 'наших';
-    display: inline-block;
-    color: $main-text-color;
+  .slider__img {
+    width: 82px;
+    margin: 0 auto;
+    margin-bottom: 23px;
+    border-radius: 50%;
 
-    @media (min-width: 768px) {
-      content: '';
+    @media (min-width: 1280px) {
+      width: 145px;
     }
   }
 
@@ -93,7 +99,13 @@
 .photo_wrapper {
   @media (min-width: 768px) {
     margin-right: 44px;
-    padding-top: 16px;
+    margin-bottom: 38px;
+  }
+  @media (min-width: 1280px) {
+    margin-bottom: 72px;
+  }
+  @media (min-width: 1680px) {
+    margin-bottom: 40px;
   }
 }
 
@@ -107,14 +119,15 @@
   }
 
   @media (min-width: 768px) {
-    align-self: start;
+    text-align: left;
   }
 }
 
-.slider__img,
 .social-logo {
   margin: 0 auto;
-  margin-bottom: 23px;
+  @media (max-width: 767px) {
+    margin-bottom: 23px;
+  }
 }
 
 .slider__stydy-place {
@@ -129,14 +142,11 @@
 }
 
 .slider-card__description {
-  display: inline-block;
-  height: 120px;
+  display: inline;
   @include font($main-text-color, 1.1, 500, 20, 0.55);
-  overflow: hidden;
 
   @media (min-width: 768px) {
     text-align: justify;
-    overflow: visible;
     height: auto;
   }
 
@@ -144,14 +154,24 @@
     @include font($main-text-color, 1.7, 500, 30, 0.9);
   }
 }
-
-.not-visible::before {
+.slider-card__description::after {
   display: inline-block;
   color: $main-text-color;
   content: '...';
 
   @media (min-width: 768px) {
     content: '';
+  }
+}
+.not-visible {
+  @include font($main-text-color, 1.1, 500, 20, 0.55);
+  display: none;
+
+  @media (min-width: 768px) {
+    display: inline;
+  }
+  @media (min-width: 1280px) {
+    @include font($main-text-color, 1.7, 500, 30, 0.9);
   }
 }
 
