@@ -1,0 +1,18 @@
+#go-top {
+  @include font($main-text-color, 1.5, 500, 34, 1.04);
+  position: fixed; 
+  bottom: 25px; 
+  right: 50px;
+  text-align: center;
+  cursor:pointer; 
+  display:none;
+  width: 65px;
+  height: 35px;
+  background: $decor-color;
+  border-radius: 5px;
+}
+
+#go-top:hover {
+  background: $active-color;
+  color: #fff;
+}

@@ -2,4 +2,5 @@
 //= './modules/animated-scroll.js'
 //= './modules/burger.js'
 //= './modules/required-tel.js'
+//= './modules/scroll-to-top.js'
 //= './modules/modal-form.js'
