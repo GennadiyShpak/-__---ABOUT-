@@ -115,3 +115,42 @@
     @include font($main-text-color, 2.1, 700, 30, 1.04);
   }
 }
+
+#close-form {
+  z-index: 5;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  top: calc(50% - 200px);
+  right: calc(50% - 20px);
+
+  &::before, 
+  &::after {
+    content: '';
+    width: 40px;
+    height: 4px;
+    border-radius: 4px;
+    background: #fff;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 20px;
+    left: 0;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+  
+  @media (min-width: 768px) {
+    top: calc(50% - 200px);
+    right: calc(50% - 290px);
+  }
+  @media (min-width: 1280px) {
+    top: calc(50% - 230px);
+    right: calc(50% - 410px);
+  }
+  @media (min-width: 1680px) {
+    top: calc(50% - 230px);
+    right: calc(50% - 410px);
+  }
+}

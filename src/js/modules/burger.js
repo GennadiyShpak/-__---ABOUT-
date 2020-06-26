@@ -20,6 +20,7 @@ body.addEventListener('click', (event) => {
     burger.classList.remove('burger-open');
     logo.classList.remove('burger-open');
     menuNav.classList.remove('burger-open');
+    btnForm.classList.remove('open-form'); 
     body.classList.remove('lock');      
     
     for (let anchor of anchors) {

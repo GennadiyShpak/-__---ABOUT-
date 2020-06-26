@@ -18,7 +18,11 @@
       background-color: $secondary-text-color;
 
     }
-
+  }
+  @media (min-width: 1680px) {
+    &::before {
+      top: 146px;
+    }
   }
 
   .program__container {    
